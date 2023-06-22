@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-Poppins;
+  }
+
+  section {
+    @apply py-10 Sdesktop:py-28 w-full;
+  }
+  .title {
+    @apply tablet:text-3xl Sdesktop:text-4xl mobile:text-2xl  font-bold;
+  }
+  .section-title {
+    @apply tablet:text-3xl Sdesktop:text-4xl mobile:text-2xl mb-5 font-medium text-accent tracking-tight;
+  }
+  .lead {
+    @apply Sdesktop:text-lg tablet:text-lg mobile:text-base   font-normal mb-5;
+  }
+  .pricing-table {
+    @apply shadow-[7px_15px_13px_4px_rgba(0,0,0,0.15)] rounded  border p-8 border-solid border-[#e4e4e4]
+    bg-[#fff];
+  }
+  .gambar-katalog {
+    @apply shadow-[7px_10px_#AA6947] rounded-[15px];
+  }
+  .btn2 {
+    @apply rounded-xl transition flex justify-center items-center;
+  }
+  .btn-lg {
+    @apply w-full px-6 py-4 text-lg font-normal;
+  }
+  .btn-lg2 {
+    @apply text-lg font-normal;
+  }
+  .btn-md {
+    @apply h-[60px] px-[16px] text-lg font-normal;
+  }
+  .btn-sm {
+    @apply h-[50px] px-[8px] text-base font-normal;
+  }
+  .btn-accent {
+    @apply text-white bg-accent  hover:bg-accent;
+  }
+  .btn-white {
+    @apply text-accent bg-white hover:bg-white/90;
+  }
+  .btn-outline {
+    @apply bg-transparent text-accent border border-accent  hover:bg-accent hover:text-white;
+  }
+  .btn-line {
+    @apply bg-accent text-white border border-accent  hover:bg-accent/70  hover:text-white;
+  }
+  .btn-link {
+    @apply text-accent bg-accent text-xl Sdesktop:text-2xl;
+  }
+}
+
+@layer utilities {
+  .containers {
+    max-width: 1024px;
+    margin: auto;
+  }
+}

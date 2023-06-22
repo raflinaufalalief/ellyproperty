@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Jual Rumah",
+    "location": "Graha Sunter Pratama",
+    "price": "Rp.2,2M",
+    "desc": "Rumah Full Renovasi Seperti Baru",
+    "desc1": {
+      "LuasTanah": ["Luas Tanah :", "90m"],
+      "LuasBangunan": ["Luas Bangunan :", "90m"],
+      "Lantai": ["Lantai :", "2 Lantai"],
+      "KamarTidur": ["Kamar Tidur :", "4 Kamar Tidur"],
+      "KamarMandi": ["Kamar Mandi :", "3 Kamar Mandi"],
+      "Granit": "Type Kramik: Granit 60x60"
+    }
+  },
+  {
+    "id": 1,
+    "title": "Jual Rumah",
+    "location": "Graha Sunter Pratama",
+    "price": "Rp.2,2M",
+    "desc": "Rumah Full Renovasi Seperti Baru",
+    "desc1": {
+      "LuasTanah": ["Luas Tanah :", "90m"],
+      "LuasBangunan": ["Luas Bangunan :", "90m"],
+      "Lantai": ["Lantai :", "2 Lantai"],
+      "KamarTidur": ["Kamar Tidur :", "4 Kamar Tidur"],
+      "KamarMandi": ["Kamar Mandi :", "3 Kamar Mandi"],
+      "Granit": "Type Kramik: Granit 60x60"
+    }
+  },
+  {
+    "id": 1,
+    "title": "Jual Rumah",
+    "location": "Graha Sunter Pratama",
+    "price": "Rp.2,2M",
+    "desc": "Rumah Full Renovasi Seperti Baru",
+    "desc1": {
+      "LuasTanah": ["Luas Tanah :", "90m"],
+      "LuasBangunan": ["Luas Bangunan :", "90m"],
+      "Lantai": ["Lantai :", "2 Lantai"],
+      "KamarTidur": ["Kamar Tidur :", "4 Kamar Tidur"],
+      "KamarMandi": ["Kamar Mandi :", "3 Kamar Mandi"],
+      "Granit": "Type Kramik: Granit 60x60"
+    }
+  },
+  {
+    "id": 1,
+    "title": "Jual Rumah",
+    "location": "Graha Sunter Pratama",
+    "price": "Rp.2,2M",
+    "desc": "Rumah Full Renovasi Seperti Baru",
+    "desc1": {
+      "LuasTanah": ["Luas Tanah :", "90m"],
+      "LuasBangunan": ["Luas Bangunan :", "90m"],
+      "Lantai": ["Lantai :", "2 Lantai"],
+      "KamarTidur": ["Kamar Tidur :", "4 Kamar Tidur"],
+      "KamarMandi": ["Kamar Mandi :", "3 Kamar Mandi"],
+      "Granit": "Type Kramik: Granit 60x60"
+    }
+  },
+  {
+    "id": 1,
+    "title": "Jual Rumah",
+    "location": "Graha Sunter Pratama",
+    "price": "Rp.2,2M",
+    "desc": "Rumah Full Renovasi Seperti Baru",
+    "desc1": {
+      "LuasTanah": ["Luas Tanah :", "90m"],
+      "LuasBangunan": ["Luas Bangunan :", "90m"],
+      "Lantai": ["Lantai :", "2 Lantai"],
+      "KamarTidur": ["Kamar Tidur :", "4 Kamar Tidur"],
+      "KamarMandi": ["Kamar Mandi :", "3 Kamar Mandi"],
+      "Granit": "Type Kramik: Granit 60x60"
+    }
+  },
+  {
+    "id": 1,
+    "title": "Jual Rumah",
+    "location": "Graha Sunter Pratama",
+    "price": "Rp.2,2M",
+    "desc": "Rumah Full Renovasi Seperti Baru",
+    "desc1": {
+      "LuasTanah": ["Luas Tanah :", "90m"],
+      "LuasBangunan": ["Luas Bangunan :", "90m"],
+      "Lantai": ["Lantai :", "2 Lantai"],
+      "KamarTidur": ["Kamar Tidur :", "4 Kamar Tidur"],
+      "KamarMandi": ["Kamar Mandi :", "3 Kamar Mandi"],
+      "Granit": "Type Kramik: Granit 60x60"
+    }
+  }
+]
