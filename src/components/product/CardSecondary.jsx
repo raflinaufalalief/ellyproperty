@@ -77,12 +77,12 @@ const CardSecondary = () => {
                       </span>
                     </div>
 
-                    <div className="mt-4">
+                    <div className="mt-4 text-center ">
                       <h2 className="text-base font-bold text-gray-800 Sdesktop:text-lg line-clamp-1">
                         {title}
                       </h2>
                       <div>
-                        <div className="flex mt-2 text-sm font-semibold text-gray-800 line-clamp-1">
+                        <div className="flex items-center justify-center mt-2 text-sm font-semibold text-gray-800 line-clamp-1">
                           <MdLocationOn className=" text-black/80" />
                           {location}
                         </div>

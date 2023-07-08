@@ -10,41 +10,23 @@
   }
 
   section {
-    @apply py-10 Sdesktop:py-28 w-full;
+    @apply mobile:py-20 Sdesktop:py-24 w-full;
   }
   .title {
-    @apply tablet:text-3xl Sdesktop:text-4xl mobile:text-2xl  font-bold;
+    @apply text-3xl font-bold capitalize Sdesktop:text-4xl text-primary;
   }
-  .section-title {
-    @apply tablet:text-3xl Sdesktop:text-4xl mobile:text-2xl mb-5 font-medium text-accent tracking-tight;
+  .subtitle {
+    @apply Sdesktop:text-lg tablet:text-lg mobile:text-lg text-secondary font-normal mb-5;
   }
-  .lead {
-    @apply Sdesktop:text-lg tablet:text-lg mobile:text-base   font-normal mb-5;
-  }
-  .pricing-table {
-    @apply shadow-[7px_15px_13px_4px_rgba(0,0,0,0.15)] rounded  border p-8 border-solid border-[#e4e4e4]
-    bg-[#fff];
-  }
-  .gambar-katalog {
-    @apply shadow-[7px_10px_#AA6947] rounded-[15px];
-  }
-  .btn2 {
-    @apply rounded-xl transition flex justify-center items-center;
-  }
-  .btn-lg {
-    @apply w-full px-6 py-4 text-lg font-normal;
-  }
-  .btn-lg2 {
-    @apply text-lg font-normal;
-  }
+
   .btn-md {
-    @apply h-[60px] px-[16px] text-lg font-normal;
+    @apply h-[60px] px-[16px] text-lg font-normal rounded-md;
   }
   .btn-sm {
-    @apply h-[50px] px-[8px] text-base font-normal;
+    @apply h-[50px] px-[10px] text-base font-normal rounded-md;
   }
   .btn-accent {
-    @apply text-white bg-accent  hover:bg-accent;
+    @apply text-white bg-accent  hover:bg-accent/60;
   }
   .btn-white {
     @apply text-accent bg-white hover:bg-white/90;

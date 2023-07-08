@@ -18,7 +18,7 @@ export default function TabsProduct() {
                 "w-full rounded-lg py-2.5 text-sm mobile:text-xs font-medium leading-5",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 mobile:text-sm focus:outline-none focus:ring-2",
                 selected
-                  ? "bg-white shadow text-accent"
+                  ? "bg-white shadow text-black"
                   : "text-white hover:bg-white/[0.12] hover:text-white"
               )
             }
@@ -31,7 +31,7 @@ export default function TabsProduct() {
                 "w-full rounded-lg py-2.5 text-sm mobile:text-xs font-medium leading-5 ",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                 selected
-                  ? "bg-white shadow text-accent"
+                  ? "bg-white shadow text-black"
                   : "text-white hover:bg-white/[0.12] hover:text-white"
               )
             }
