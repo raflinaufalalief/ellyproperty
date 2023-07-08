@@ -25,7 +25,7 @@ export default function DetailProduct() {
   }
 
   return (
-    <section className="px-4 2xl:container 2xl:mx-auto Sdesktop:py-16 Sdesktop:px-20 md:py-12 md:px-6 ">
+    <section className="px-4 py-12 2xl:container 2xl:mx-auto Sdesktop:py-16 Sdesktop:px-20 md:px-6 ">
       <p className="mb-8 text-base font-normal leading-4 text-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
         Home / Furniture / Wooden Stool
       </p>
