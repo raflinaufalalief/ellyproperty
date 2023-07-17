@@ -20,24 +20,16 @@ const Modal = () => {
       {showModal ? (
         <>
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-            <div className="relative w-auto mx-auto my-6 mobile:max-w-lg Sdesktop:max-w-6xl">
+            <div className="absolute w-auto mx-auto my-6 top-2 mobile:w-full mobile:px-2 Sdesktop:max-w-6xl">
               {/*content*/}
               <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid rounded-t border-slate-200">
                   <h3 className="text-3xl font-semibold">Detail</h3>
-                  <button
-                    className="float-right p-1 ml-auto text-3xl font-semibold leading-none text-black bg-transparent border-0 outline-none opacity-5 focus:outline-none"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <h1 className="block w-6 h-6 text-2xl text-black bg-transparent outline-none opacity-5 focus:outline-none">
-                      ×
-                    </h1>
-                  </button>
                 </div>
                 {/*body*/}
-                <div className="relative flex-auto p-6 Sdesktop:w-[500px]">
-                  <div className="mt-10">
+                <div className=" flex-auto p-6 Sdesktop:w-[500px]">
+                  <div className="">
                     <div className="flex items-center justify-between border-t-2 border-black/20">
                       <h1 className="py-4 text-sm font-medium text-black/70">
                         Kamar Tidur
@@ -146,7 +138,7 @@ const Modal = () => {
                       <h1 className="py-4 text-sm font-medium text-black/70">
                         Pemandangan
                       </h1>
-                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                      <h2 className="py-4 text-sm font-medium w-[10rem] text-right text-black/60 ">
                         {myData?.pemandang ? myData.pemandang : "-"}
                       </h2>
                     </div>
