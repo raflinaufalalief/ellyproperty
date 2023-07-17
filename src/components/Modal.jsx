@@ -20,7 +20,7 @@ const Modal = () => {
       {showModal ? (
         <>
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-            <div className="relative w-auto mx-auto my-6 Sdesktop:max-w-6xl">
+            <div className="relative w-auto mx-auto my-6 mobile:max-w-lg Sdesktop:max-w-6xl">
               {/*content*/}
               <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
                 {/*header*/}
