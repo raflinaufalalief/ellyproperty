@@ -230,7 +230,6 @@ export default function ProductDetail() {
             </div>
             <hr className="my-5 rounded-full bg-black/10" />
             {/* Detail Property */}
-
             <Modal />
           </div>
 
@@ -249,7 +248,7 @@ export default function ProductDetail() {
             </form>
           </div>
 
-          <div className="py-10 Sdesktop:col-span-2 Sdesktop:col-start-1 Sdesktop:border-r Sdesktop:border-gray-200 Sdesktop:pb-16 Sdesktop:pr-8 Sdesktop:pt-6">
+          <div className="pb-10 Sdesktop:col-span-2 Sdesktop:col-start-1 Sdesktop:border-r Sdesktop:border-gray-200 Sdesktop:pb-16 Sdesktop:pr-8 Sdesktop:pt-6">
             {/* Description and details */}
             <hr className="my-5 rounded-full bg-black/10" />
             <div className="py-4">

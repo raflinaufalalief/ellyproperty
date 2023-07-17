@@ -1,6 +1,7 @@
 import React from "react"
-import { HiOutlineChevronDown } from "react-icons/hi"
+
 import image from "../assets/banner2.png"
+import Filter from "./Filter"
 
 const Hero = () => {
   return (
@@ -15,15 +16,8 @@ const Hero = () => {
               Sebuah Tema untuk Layanan Perumahan untuk Semua Kebutuhan Rumah.
             </p>
           </div>
-          {/* btn & comp text */}
-          <a href="/#product">
-            <div className="flex items-center max-w-sm pt-5 mx-auto Sdesktop:mx-0 gap-x-2 Sdesktop:gap-x-6">
-              <button className="flex items-center justify-center mx-auto Sdesktop:mx-0 btn-sm Sdesktop:btn-md btn-accent Sdesktop:gap-x-4 mobile:mx-0 mobile:gap-x-2 ">
-                Lihat Property
-                <HiOutlineChevronDown />
-              </button>
-            </div>
-          </a>
+          {/* components search */}
+          <Filter />
         </div>
 
         <div className="flex-1 basis-[15rem]">
