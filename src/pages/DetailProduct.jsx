@@ -3,7 +3,7 @@ import "react-photo-view/dist/react-photo-view.css"
 // data
 import { data } from "../data/ListingTerbaru/DataTerbaru.json"
 import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import ProfileCard from "../components/ProfileCard"
 import { BiBath, BiBed } from "react-icons/bi"
 import { BsBuildingCheck } from "react-icons/bs"
@@ -151,7 +151,7 @@ export default function ProductDetail() {
         {/*  informasi property */}
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 mobile:px-6 Sdesktop:grid Sdesktop:max-w-7xl Sdesktop:grid-cols-3 Sdesktop:grid-rows-[auto,auto,1fr] Sdesktop:gap-x-8 Sdesktop:px-8 Sdesktop:pb-24 Sdesktop:pt-16">
           <div className="Sdesktop:col-span-2 Sdesktop:border-r Sdesktop:border-gray-200 Sdesktop:pr-8">
-            <div className="bg-primary w-fit px-4 py-[.30rem] rounded-full">
+            <div className="bg-accent w-fit px-4 py-[.30rem] rounded-full">
               <h1 className="text-xs font-medium text-white">{myData.type}</h1>
             </div>
             <div className="mt-4">
@@ -168,18 +168,18 @@ export default function ProductDetail() {
             </div>
             <hr className="my-3 rounded-full bg-black/10" />
             {/* sepsifikasi informasi */}
-            <div className="flex flex-col py-2">
+            <div className="flex flex-col py-5">
               <h1 className="text-lg font-bold text-black/70">
                 Informasi Properti
               </h1>
               <h2 className="font-medium text-black/70">Spesifikasi</h2>
             </div>
-            <div className="grid grid-cols-3 Sdesktop:gap-0 Sdesktop:divide-x">
+            <div className="grid grid-cols-3 Sdesktop:gap-0 ">
               {/* <!-- stat - start --> */}
-              <div className="flex flex-col">
-                <div className="text-xl font-bold text-indigo-500 sm:text-2xl Sdesktop:text-3xl">
-                  <h1 className="text-sm font-semibold text-black/70">
-                    Luas Keseluruhan
+              <div className="flex flex-col border-r-2 ">
+                <div className="mr-3 space-x-2 font-bold text-indigo-500 mobile:text-2xl Sdesktop:text-3xl">
+                  <h1 className="text-sm font-semibold text-black/70 w-[140px] ">
+                    Luas Tanah
                     <div className="flex items-center space-x-3 text-sm font-semibold mobile:text-base ">
                       <span className="text-2xl">
                         <BsBuildingCheck />
@@ -192,9 +192,8 @@ export default function ProductDetail() {
                 </div>
               </div>
               {/* <!-- stat - end --> */}
-
               {/* <!-- stat - start --> */}
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center border-r-2">
                 <div className="text-xl font-bold text-indigo-500 sm:text-2xl Sdesktop:text-3xl">
                   <h1 className="text-sm font-semibold text-black/70">
                     Kamar Tidur
@@ -231,9 +230,8 @@ export default function ProductDetail() {
             </div>
             <hr className="my-5 rounded-full bg-black/10" />
             {/* Detail Property */}
-            <div>
-              <Modal />
-            </div>
+
+            <Modal />
           </div>
 
           {/* Options */}
@@ -253,35 +251,14 @@ export default function ProductDetail() {
 
           <div className="py-10 Sdesktop:col-span-2 Sdesktop:col-start-1 Sdesktop:border-r Sdesktop:border-gray-200 Sdesktop:pb-16 Sdesktop:pr-8 Sdesktop:pt-6">
             {/* Description and details */}
-            <div>
-              <h3 className="sr-only">Description</h3>
-
-              <div className="space-y-6">
-                <p className="text-base text-gray-900">{product.description}</p>
-              </div>
+            <hr className="my-5 rounded-full bg-black/10" />
+            <div className="py-4">
+              <h1 className="font-medium text-black/70">Deskripsi</h1>
+              <h2 className="mt-2 text-sm font-medium text-black/80">
+                {myData.deskripsi}
+              </h2>
             </div>
-
-            <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
-
-              <div className="mt-4">
-                <ul role="list" className="pl-4 space-y-2 text-sm list-disc">
-                  {product.highlights.map((highlight) => (
-                    <li key={highlight} className="text-gray-400">
-                      <span className="text-gray-600">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Details</h2>
-
-              <div className="mt-4 space-y-6">
-                <p className="text-sm text-gray-600">{product.details}</p>
-              </div>
-            </div>
+            <div />
           </div>
         </div>
       </div>
