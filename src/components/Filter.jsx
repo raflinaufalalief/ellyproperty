@@ -28,7 +28,7 @@ const Filter = () => {
   }
 
   return (
-    <div className="w-full pt-10 pb-8" id="home">
+    <div className="w-full pt-3 form-[#BAE5FE] pb-8" id="home">
       <div className="mx-auto containers">
         <div className="">
           <h1 className="mb-3 text-lg font-medium text-accent">
