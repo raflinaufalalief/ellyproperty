@@ -5,8 +5,8 @@ import { useParams } from "react-router-dom"
 const Modal = () => {
   const [showModal, setShowModal] = useState(false)
   const { title } = useParams()
-  const myData = data.find((data) => data.title === String(title))
-  useEffect(() => {}, [myData])
+  const myData = data.find((myData) => myData.title === String(title))
+  useEffect(() => {}, [data])
 
   return (
     <>
@@ -20,7 +20,7 @@ const Modal = () => {
       {showModal ? (
         <>
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-            <div className="relative w-auto max-w-sm mx-auto my-6">
+            <div className="relative w-auto mx-auto my-6 Sdesktop:max-w-6xl">
               {/*content*/}
               <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
                 {/*header*/}
@@ -36,53 +36,119 @@ const Modal = () => {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="">
-                  <div className="px-5 pt-4 mt-4 border-t border-gray-200 Sdesktop:py-8 Sdesktop:border-t-0 Sdesktop:mt-0 Sdesktop:text-left">
-                    <div className="flex py-2 border-gray-200">
-                      <h1 className="text-gray-500">Area</h1>
-                      <h1 className="ml-auto text-gray-900">{myData.area}</h1>
-                    </div>
-                    <div className="flex py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">luas bangunan</h1>
-                      <h1 className="ml-auto text-gray-900">{myData.lb}</h1>
-                    </div>
-                    <div className="flex items-center py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">
-                        luas bangunan <br /> keseluruhan
+                <div className="relative flex-auto p-6 Sdesktop:w-[500px]">
+                  <div className="mt-10">
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Kamar Tidur
                       </h1>
-                      <h1 className="ml-auto text-gray-900">{myData.lbb}</h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData.kt}
+                      </h2>
                     </div>
-                    <div className="flex py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">Kamar tidur</h1>
-                      <h1 className="ml-auto text-gray-900">{myData.kt}</h1>
-                    </div>
-                    <div className="flex py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">Kamar mandi</h1>
-                      <h1 className="ml-auto text-gray-900">{myData.km}</h1>
-                    </div>
-                    <div className="flex py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">Lantai</h1>
-                      <h1 className="ml-auto text-gray-900">{myData.lantai}</h1>
-                    </div>
-                    <div className="flex py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">Sertifikat</h1>
-                      <h1 className="ml-auto text-gray-900">{myData.serti}</h1>
-                    </div>
-                    <div className="flex justify-between py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">Pemandangan</h1>
-                      <h1 className="ml-auto text-gray-900">
-                        {myData.pemandang}
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Kamar Mandi
                       </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData.km}
+                      </h2>
                     </div>
-                    <div className="flex py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">Listrik</h1>
-                      <h1 className="ml-auto text-gray-900">
-                        {myData.listrik}
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Luas Bangunan
                       </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData.lb}
+                      </h2>
                     </div>
-                    <div className="flex py-2 border-t border-gray-200">
-                      <h1 className="text-gray-500">Air</h1>
-                      <h1 className="ml-auto text-gray-900">{myData.air}</h1>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Luas Bangunan + Balkon
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.lbb ? myData.lbb : "-"}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Luas Tanah
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.lt ? myData.lt : "-"}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Garasi
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.garasi ? myData.garasi : "-"}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Carport
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.garasi ? myData.garasi : "parkiran umum"}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Tipe Properti
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.type}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Sertifikat
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.serti}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Listrik
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.listrik}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        KT. Pembantu
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.ktp ? myData.ktp : "-"}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        KM. Pembantu
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.kmp ? myData.kmp : "-"}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Jumlah Lantai
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.jl ? myData.jl : "-"}
+                      </h2>
+                    </div>
+                    <div className="flex items-center justify-between border-t-2 border-black/20">
+                      <h1 className="py-4 text-sm font-medium text-black/70">
+                        Pemandangan
+                      </h1>
+                      <h2 className="py-4 text-sm font-medium text-black/60 ">
+                        {myData?.pemandang ? myData.pemandang : "-"}
+                      </h2>
                     </div>
                   </div>
                 </div>
