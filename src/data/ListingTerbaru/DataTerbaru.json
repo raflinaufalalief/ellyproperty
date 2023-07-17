@@ -17,7 +17,11 @@
             "pemandang": "City",
             "listrik": "2200",
             "air": "WTP",
-            "harga": "820Jt Nego",
+            "harga": "820Jt",
+            "hargajenis": [
+                "nego",
+                "net"
+            ],
             "thumnail": "/productImage/CitraGarden7/thumnail.jpeg",
             "image": [
                 "/productImage/CitraGarden7/thumnail.jpeg",

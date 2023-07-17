@@ -18,6 +18,9 @@ export default {
       // => @media (min-width: 1024px and max-width: 1279px) { ... }
     },
     extend: {
+      gridTemplateRows: {
+        "[auto,auto,1fr]": "auto auto 1fr",
+      },
       colors: {
         primary: "#24305E",
         secondary: "#737373",
@@ -28,5 +31,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // ...
+    require("@tailwindcss/aspect-ratio"),
+  ],
 }

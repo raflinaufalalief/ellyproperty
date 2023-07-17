@@ -31,7 +31,7 @@ const Footer = () => {
           <span className="block text-gray-500 text-Sdesktop Sdesktop:text-center dark:text-gray-400">
             © 2023{" "}
             <Link to="/" className="hover:underline">
-              EllyProperty
+              ElyProperty
             </Link>
             . All Rights Reserved.
           </span>

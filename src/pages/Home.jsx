@@ -1,8 +1,8 @@
 import React from "react"
-import Navbar from "../components/Navbar"
+
 import Hero from "../components/Hero"
-import AllProperty from "../components/AllProperty"
-import Footer from "../components/Footer"
+// import AllProperty from "../components/AllProperty"
+
 import CTA from "../components/CTA"
 import ContactUs from "../components/ContactUs"
 import OurHope from "../components/OurHope"
@@ -12,7 +12,6 @@ import Product from "../components/Product"
 const Home = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <WhyChoose />
       <OurHope />
@@ -20,7 +19,6 @@ const Home = () => {
       <Product />
       <CTA />
       <ContactUs />
-      <Footer />
     </>
   )
 }

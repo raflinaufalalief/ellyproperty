@@ -5,12 +5,13 @@ import { GiResize } from "react-icons/gi"
 import { BsFillBuildingFill } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay } from "swiper"
-// import { Pagination } from "swiper/modules"
+// import { Autoplay } from "swiper"
+import { Pagination } from "swiper/modules"
 
 // import swiper styles
 import "swiper/css"
 import "swiper/css/autoplay"
+import "swiper/css/pagination"
 
 const Product = () => {
   return (
@@ -24,7 +25,7 @@ const Product = () => {
             </h1>
 
             <Swiper
-              modules={[Autoplay]}
+              modules={[Pagination]}
               pagination={{
                 clickable: true,
               }}
@@ -106,35 +107,10 @@ const Product = () => {
                         </div>
                         <hr className="my-2 bg-text/20" />
                       </div>
-                      {/* <div className="mt-2">
-                        <div className="flex items-center justify-between font-normal text-gray-800 ">
-                          <span className="mt-2">{desc}</span>
-                        </div>
-                        <hr className="bg-black/10 h-[1.5px] my-2" />
-                        <div className="flex items-center justify-between font-medium text-gray-800 ">
-                          <h1>{desc1.Lantai[0]}</h1>
-                          <h1>{desc1.Lantai[1]}</h1>
-                        </div>
-                        <div className="flex items-center justify-between font-medium text-gray-800 ">
-                          <h1>{desc1.LuasTanah[0]}</h1>
-                          <h1>{desc1.LuasTanah[1]}</h1>
-                        </div>
-                        <div className="flex items-center justify-between font-medium text-gray-800 ">
-                          <h1>{desc1.LuasBangunan[0]}</h1>
-                          <h1>{desc1.LuasBangunan[1]}</h1>
-                        </div>
-                        <div className="flex items-center justify-between font-medium text-gray-800">
-                          <h1>{desc1.KamarMandi[0]}</h1>
-                          <h1>{desc1.KamarMandi[1]}</h1>
-                        </div>
-                        <div className="flex items-center justify-between font-medium text-gray-800 ">
-                          <h1>{desc1.KamarTidur[0]}</h1>
-                          <h1>{desc1.KamarTidur[1]}</h1>
-                        </div>
-                      </div> */}
+
                       <div className="grid grid-cols-2 mt-8">
                         <div className="flex items-center">
-                          <Link to={`/product/${res.title}`}>
+                          <Link to={`/listings/detail/${res.title}`}>
                             <button className="inline-flex w-full px-3 py-2 text-sm font-medium text-white transition-transform duration-300 ease-in-out transform rounded-lg select-none bg-accent hover:-translate-y-2">
                               view detail
                             </button>

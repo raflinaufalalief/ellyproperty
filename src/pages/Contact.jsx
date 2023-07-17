@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Navbar from "../components/Navbar"
 // import emailjs from "@emailjs/browser"
 
@@ -13,11 +13,12 @@ import Navbar from "../components/Navbar"
 //   )
 // }
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
   return (
     <section>
-      <div>
-        <Navbar />
-      </div>
+      <div></div>
       {/* <div className="bg-white dark:bg-gray-900">
         <div className="px-4 py-8 mx-auto containers Sdesktop:py-16">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-center text-gray-900 dark:text-white">

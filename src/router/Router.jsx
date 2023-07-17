@@ -2,10 +2,11 @@ import React from "react"
 import { Route, Routes } from "react-router-dom"
 import Home from "../pages/Home"
 import About from "../pages/About"
-import Product from "../pages/Product"
+import Product from "../pages/ProductPage"
 import Profile from "../pages/Profile"
 import Contact from "../pages/Contact"
-import DetailProductPage from "../pages/DetailProduct"
+import DetailProduct from "../pages/DetailProduct"
+// import DetailListing from "../pages/detailListing"
 
 const Router = () => {
   return (
@@ -13,8 +14,8 @@ const Router = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/product" element={<Product />} />
-      <Route path="/product/:title" element={<DetailProductPage />} />
-
+      <Route path="/listings/detail/:title" element={<DetailProduct />} />
+      {/* <Route path="/" element={<DetailListing />} /> */}
       <Route path="/profile" element={<Profile />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
