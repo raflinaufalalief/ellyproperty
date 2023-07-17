@@ -68,7 +68,7 @@ const Modal = () => {
                       <h1 className="text-gray-500">Sertifikat</h1>
                       <h1 className="ml-auto text-gray-900">{myData.serti}</h1>
                     </div>
-                    <div className="flex py-2 border-t border-gray-200">
+                    <div className="flex justify-between py-2 border-t border-gray-200">
                       <h1 className="text-gray-500">Pemandangan</h1>
                       <h1 className="ml-auto text-gray-900">
                         {myData.pemandang}
