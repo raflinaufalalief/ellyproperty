@@ -20,9 +20,18 @@ const Product = () => {
         <div className="mobile:px-4">
           {/* Listingan Terbaru */}
           <div className="ListinganTerbaru">
-            <h1 className="mb-5 text-3xl mobile:text-xl mobile:font-semibold text-black/90">
-              Listingan Terbaru
-            </h1>
+            <div className="flex items-end justify-between gap-4 mb-6 ">
+              <h1 className="text-2xl font-medium text-primary mobile:text-lg ">
+                Property Populer
+              </h1>
+
+              <a
+                href="#"
+                className="inline-block text-sm font-semibold text-center text-gray-500 transition duration-100 bg-white border rounded-lg outline-none mobile:px-2 mobile:py-1 ring-indigo-300 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 Sdesktop:px-8 Sdesktop:py-3 Sdesktop:text-base"
+              >
+                Lihat selengkapnya
+              </a>
+            </div>
 
             <Swiper
               modules={[Pagination]}

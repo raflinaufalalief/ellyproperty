@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react"
 // import { Autoplay } from "swiper"
-import { Pagination } from "swiper/modules"
+import { Pagination, Autoplay } from "swiper/modules"
 
 // import swiper styles
 import "swiper/css"
@@ -12,7 +12,7 @@ import "swiper/css/autoplay"
 import "swiper/css/pagination"
 const OurHope = () => {
   return (
-    <section className="bg-[#BAE5FE]">
+    <section className="bg-gradient-to-br from-[#e4f9ff] via-[#ffffff] to-[#e5f3f6]">
       <div className="mx-auto containers mobile:px-4 ">
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="w-full mobile:px-5">
@@ -31,11 +31,14 @@ const OurHope = () => {
         {/* end section */}
         <>
           <Swiper
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             pagination={{
               clickable: true,
             }}
-            autoplay={true}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
             slidesPerView={1}
             spaceBetween={30}
             breakpoints={{
@@ -61,7 +64,7 @@ const OurHope = () => {
               const { name, image, text } = result
               return (
                 <SwiperSlide
-                  className="w-full mt-5 border border-white Sdesktop:px-4 pt-9"
+                  className="w-full mt-5 border rounded-md shadow-md Sdesktop:px-4 pt-9"
                   key={index}
                 >
                   <div className="mx-auto mb-10 max-w-[500px] mobile:max-w-[300px]  ">
@@ -69,7 +72,7 @@ const OurHope = () => {
                       <img src={image} alt="image" />
                     </div>
                     <div>
-                      <h3 className="mb-4 text-xl font-semibold text-center text-primary hover:text-accent mobile:text-xl Sdesktop:text-xl">
+                      <h3 className="mb-4 text-xl font-semibold text-primary mobile:text-xl Sdesktop:text-xl">
                         {name}
                       </h3>
                       <p className="mobile:text-base Sdesktop:text-base Sdesktop:h-36 mobile:h-32 text-secondary">

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const CTA = () => {
   return (
-    <section className="bg-[#BAE5FE]">
+    <section className="bg-gradient-to-br from-[#e4f9ff] via-[#ffffff] to-[#e5f3f6]">
       <div className="relative flex flex-col mx-auto Sdesktop:flex-row containers mobile:px-4 ">
         {/* <!-- Left Column --> */}
         <div className="flex w-full max-w-xl mx-auto ">

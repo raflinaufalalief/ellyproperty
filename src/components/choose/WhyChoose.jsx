@@ -10,7 +10,7 @@ export default function WhyChoose() {
   return (
     <section className="mobile:pt-0">
       <div className="mx-auto containers ">
-        <div className="justify-center mobile:px-4 Sdesktop:flex">
+        <div className="justify-center mobile:px-4 tablet:px-8 Sdesktop:flex">
           <div className="Sdesktop:w-8/12 mobile:w-12/12">
             <h1 className="title">
               Temukan <span className="text-accent">Rumah</span>
