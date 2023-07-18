@@ -28,10 +28,10 @@ const Filter = () => {
   }
 
   return (
-    <div className="w-full pt-3 form-[#BAE5FE] pb-8" id="home">
+    <div className="w-full from-[#BAE5FE] to-white pb-8" id="home">
       <div className="mx-auto containers">
         <div className="">
-          <h1 className="mb-3 text-lg font-medium text-accent">
+          <h1 className="mb-3 text-lg font-medium text-primary">
             Cari Properti Dengan Mudah
           </h1>
           <div className="space-y-5 text-center">
@@ -70,7 +70,7 @@ const Filter = () => {
             </div>
             <button
               onClick={handlerFilter}
-              className="w-full px-4 py-2 mt-6 text-lg font-semibold bg-white rounded-md shadow-md text-accent"
+              className="w-full px-4 py-2 mt-6 text-lg font-semibold bg-[#BAE5FE] rounded-md shadow-md text-primary"
             >
               Search
             </button>

@@ -3,11 +3,7 @@ import icon1 from "../assets/buy.jpg"
 import icon2 from "../assets/rent.jpg"
 import icon3 from "../assets/sale.jpg"
 import icon4 from "../assets/renov.jpg"
-// assets brand
-import image1 from "../assets/smr.png"
-import image2 from "../assets/dpl.png"
-import image3 from "../assets/sml.png"
-import image4 from "../assets/alamsutra.png"
+
 //assets hope
 import image5 from "../assets/time.jpg"
 import image6 from "../assets/qualitas.jpg"
@@ -20,6 +16,13 @@ export const dataNavLink = [
   { id: 3, name: "Product", path: "/product" },
   { id: 4, name: "Profile", path: "/profile" },
   { id: 5, name: "Contact", path: "/contact" },
+]
+
+export const dataNavLinkFooter = [
+  { id: 1, name: "About", path: "/about" },
+  { id: 2, name: "Product", path: "/product" },
+  { id: 3, name: "Profile", path: "/profile" },
+  { id: 4, name: "Contact", path: "/contact" },
 ]
 
 export const hope = [
@@ -67,25 +70,6 @@ export const services = [
     name: "Resonavasi & lain-lain",
     image: icon4,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-]
-
-export const brands = [
-  {
-    id: 1,
-    img: image1,
-  },
-  {
-    id: 2,
-    img: image2,
-  },
-  {
-    id: 3,
-    img: image3,
-  },
-  {
-    id: 4,
-    img: image4,
   },
 ]
 
