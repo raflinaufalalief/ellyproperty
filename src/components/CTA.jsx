@@ -22,9 +22,7 @@ const CTA = () => {
                   Kami juga menyediakan solusi lengkap untuk memperbarui dan
                   memodernisasi rumah. Mereka merencanakan, merancang, dan
                   melaksanakan perubahan interior dan eksterior rumah sesuai
-                  kebutuhan Anda. Dengan manajemen proyek yang baik, mereka
-                  membantu memastikan proyek berjalan lancar dan menghasilkan
-                  hasil renovasi yang memuaskan.
+                  kebutuhan Anda.
                 </p>
               </div>
             </div>

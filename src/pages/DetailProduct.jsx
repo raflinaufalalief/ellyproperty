@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom"
 import { useEffect } from "react"
 import ProfileCard from "../components/ProfileCard"
 import { BiBath, BiBed } from "react-icons/bi"
-import { BsBuildingCheck } from "react-icons/bs"
+import { BsBuildingCheck, BsWhatsapp } from "react-icons/bs"
 import Modal from "../components/Modal"
 
 const product = {
@@ -256,6 +256,14 @@ export default function ProductDetail() {
               <h2 className="mt-2 text-sm font-medium text-black/80">
                 {myData.deskripsi}
               </h2>
+            </div>
+            <div className="Sdesktop:hidden">
+              <div className="px-3 py-2 mt-3 text-gray-600 bg-green-700 rounded shadow-sm hover:shadow hover:bg-green-800">
+                <div className="flex items-center justify-center py-2 text-lg text-white gap-x-3">
+                  <BsWhatsapp />
+                  WhatsApp
+                </div>
+              </div>
             </div>
             <div />
           </div>

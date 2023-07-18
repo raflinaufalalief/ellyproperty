@@ -20,17 +20,17 @@ const Product = () => {
         <div className="mobile:px-4">
           {/* Listingan Terbaru */}
           <div className="ListinganTerbaru">
-            <div className="flex items-end justify-between gap-4 mb-6 ">
+            <div className="flex items-end justify-between gap-4 mb-3 ">
               <h1 className="text-2xl font-medium text-primary mobile:text-lg ">
-                Property Populer
+                Property Terbaru
               </h1>
 
-              <a
-                href="#"
-                className="inline-block text-sm font-semibold text-center text-gray-500 transition duration-100 bg-white border rounded-lg outline-none mobile:px-2 mobile:py-1 ring-indigo-300 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 Sdesktop:px-8 Sdesktop:py-3 Sdesktop:text-base"
+              <Link
+                to="/product"
+                className="inline-block text-sm font-normal text-center transition duration-100 rounded-lg outline-none text-primary mobile:px-2 mobile:py-1 ring-indigo-300 hover:text-accent focus-visible:ring a Sdesktop:text-base"
               >
                 Lihat selengkapnya
-              </a>
+              </Link>
             </div>
 
             <Swiper
@@ -84,34 +84,36 @@ const Product = () => {
                           {res.title}
                         </h2>
                         <div>
-                          <div className="flex items-center mt-2 text-sm font-semibold text-gray-800 line-clamp-1">
+                          <div className="flex items-center mt-2 text-sm font-normal text-gray-800 line-clamp-1">
                             <FaLocationDot className=" text-black/80" />
                             {res.area}
                           </div>
                         </div>
                         <div className="mt-4">
-                          <h1 className="text-base font-normal text-text/60">
+                          <h1 className="text-sm font-normal text-text/60">
                             Harga mulai dari
                           </h1>
-                          <h3 className="text-2xl font-medium">{res.harga}</h3>
+                          <h3 className="text-base font-medium">
+                            Rp {res.harga}
+                          </h3>
                         </div>
                         <hr className="my-2 bg-text/20" />
-                        <div className="flex justify-center gap-x-4">
+                        <div className="flex justify-center gap-x-4 ">
                           <div className="flex items-center gap-x-2">
-                            <FaBath className="text-xl" />
-                            <h1 className="text-lg font-medium">{res.km}</h1>
+                            <FaBath className="text-xbase" />
+                            <h1 className="text-sm font-normal">{res.km}</h1>
                           </div>
                           <div className="flex items-center gap-x-2">
-                            <FaBed className="text-xl" />
-                            <h1 className="text-lg font-medium">{res.kt}</h1>
+                            <FaBed className="text-base" />
+                            <h1 className="text-sm font-normal">{res.kt}</h1>
                           </div>
                           <div className="flex items-center gap-x-2">
-                            <GiResize className="text-xl" />
-                            <h1 className="text-lg font-medium">{res.lb}</h1>
+                            <GiResize className="text-base" />
+                            <h1 className="text-sm font-normal">{res.lb}</h1>
                           </div>
                           <div className="flex items-center gap-x-2">
                             <BsFillBuildingFill className="text-xl" />
-                            <h1 className="text-lg font-medium">{res?.lbb}</h1>
+                            <h1 className="text-sm font-normal">{res?.lbb}</h1>
                           </div>
                         </div>
                         <hr className="my-2 bg-text/20" />
