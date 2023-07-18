@@ -36,13 +36,13 @@ export const hope = [
     id: 2,
     name: "Properti Berkualitas Baik",
     image: image6,
-    text: "Properti yang memenuhi standar tinggi dalam segala aspek, baik dari segi desain, konstruksi, kualitas bahan, maupun fasilitas yang disediakan. ",
+    text: "Properti yang memenuhi standar tinggi dalam segala aspek, baik dari segi desain, konstruksi, kualitas bahan, maupun fasilitas yang disediakan.",
   },
   {
     id: 3,
     name: "Investasi Jangka Panjang",
     image: image7,
-    text: "Investasi property adalah tindakan membeli atau memiliki properti dengan tujuan mendapatkan keuntungan finansial melalui apresiasi nilai properti dan pendapatan sewa.",
+    text: "Tindakan membeli atau memiliki properti dengan tujuan mendapatkan keuntungan finansial melalui apresiasi nilai properti dan pendapatan sewa.",
   },
 ]
 

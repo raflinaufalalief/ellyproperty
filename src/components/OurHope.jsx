@@ -2,7 +2,14 @@ import React from "react"
 import { hope } from "../data/data"
 import { BsArrowRight } from "react-icons/bs"
 import { Link } from "react-router-dom"
+import { Swiper, SwiperSlide } from "swiper/react"
+// import { Autoplay } from "swiper"
+import { Pagination } from "swiper/modules"
 
+// import swiper styles
+import "swiper/css"
+import "swiper/css/autoplay"
+import "swiper/css/pagination"
 const OurHope = () => {
   return (
     <section className="bg-[#BAE5FE]">
@@ -22,41 +29,73 @@ const OurHope = () => {
           </div>
         </div>
         {/* end section */}
-        <div className="flex flex-wrap ">
-          {hope.map((result, index) => {
-            const { name, image, text } = result
-            return (
-              <div
-                key={index}
-                className="w-full px-8 mt-5 border border-white pt-9 Sdesktop:w-1/3"
-              >
-                <div className="mx-auto mb-10 max-w-[500px]">
-                  <div className="mb-8 overflow-hidden rounded-md">
-                    <img src={image} alt="image" />
-                  </div>
-                  <div>
-                    <h3 className="inline-block mb-4 text-xl font-semibold text-primary hover:text-accent mobile:text-2xl Sdesktop:text-xl">
-                      {name}
-                    </h3>
-                    <p className="mobile:text-lg Sdesktop:text-base Sdesktop:h-36 text-secondary">
-                      {text}
-                    </p>
-                  </div>
-                  <div>
-                    <Link to="/about">
-                      <button className="flex items-center justify-center pt-4 mx-0 text-base text-primary hover:text-accent Sdesktop:gap-x-4 mobile:gap-x-2">
-                        Selengkapnya <BsArrowRight />
-                      </button>
-                    </Link>
+        <>
+          <Swiper
+            modules={[Pagination]}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={true}
+            slidesPerView={1}
+            spaceBetween={30}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1170: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
+          >
+            {hope.map((result, index) => {
+              const { name, image, text } = result
+              return (
+                <SwiperSlide
+                  className="w-full mt-5 border border-white Sdesktop:px-4 pt-9"
+                  key={index}
+                >
+                  <div className="mx-auto mb-10 max-w-[500px] mobile:max-w-[300px]  ">
+                    <div className="mb-8 overflow-hidden rounded-md">
+                      <img
+                        className="mobile:w-[250px] rounded-md mx-auto"
+                        src={image}
+                        alt="image"
+                      />
+                    </div>
                     <div>
-                      <span className="inline-block w-7/12 h-1 rounded-full mobile:w-6/12 bg-accent"></span>
+                      <h3 className="mb-4 text-xl font-semibold text-center text-primary hover:text-accent mobile:text-xl Sdesktop:text-xl">
+                        {name}
+                      </h3>
+                      <p className="mobile:text-base Sdesktop:text-base Sdesktop:h-36 mobile:h-32 text-secondary">
+                        {text}
+                      </p>
+                    </div>
+                    <div>
+                      <Link to="/about">
+                        <button className="flex items-center justify-center pt-4 mx-0 text-base text-primary hover:text-accent Sdesktop:gap-x-4 mobile:gap-x-2">
+                          Selengkapnya <BsArrowRight />
+                        </button>
+                      </Link>
+                      <div>
+                        <span className="inline-block w-7/12 h-1 rounded-full mobile:w-6/12 bg-accent"></span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
+        </>
       </div>
     </section>
   )
