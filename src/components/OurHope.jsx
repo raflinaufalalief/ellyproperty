@@ -66,11 +66,7 @@ const OurHope = () => {
                 >
                   <div className="mx-auto mb-10 max-w-[500px] mobile:max-w-[300px]  ">
                     <div className="mb-8 overflow-hidden rounded-md">
-                      <img
-                        className="mobile:w-[250px] rounded-md mx-auto"
-                        src={image}
-                        alt="image"
-                      />
+                      <img src={image} alt="image" />
                     </div>
                     <div>
                       <h3 className="mb-4 text-xl font-semibold text-center text-primary hover:text-accent mobile:text-xl Sdesktop:text-xl">
