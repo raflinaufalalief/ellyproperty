@@ -37,14 +37,14 @@ const Filter = () => {
           <div className="space-y-5 text-center">
             <label
               for="default-search"
-              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only "
             >
               Search
             </label>
-            <div class="relative">
-              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg
-                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  className="w-5 h-5 text-gray-500 "
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ const Filter = () => {
               <input
                 type="search"
                 id="default-search"
-                class="block p-4 pl-10 w-full text-sm text-gray-900  rounded-lg border "
+                className="block w-full p-4 pl-10 text-sm text-gray-900 border rounded-lg "
                 placeholder="Search Mockups, Logos..."
                 value={area}
                 onChange={(e) => setArea(e.target.value)}

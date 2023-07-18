@@ -3,7 +3,7 @@ import Filter from "../components/Filter"
 import hero from "../assets/banner2.png"
 const Hero = () => {
   return (
-    <section className="Sdesktop:pt-0">
+    <section className="Sdesktop:py-0 mobile:py-24">
       <div className="mx-auto containers mobile:px-4 tablet:px-8">
         <img
           className="absolute inset-0 object-cover object-center w-full h-full"
@@ -11,7 +11,7 @@ const Hero = () => {
           alt="background"
         />
         <div className="relative z-10 items-center mx-auto containers Sdesktop:flex">
-          <div className="w-full h-full Sdesktop:w-1/2">
+          <div className="w-full Sdesktop:w-1/2">
             <h1 className="mb-4 uppercase title">ElyFutura</h1>
             <p className="subtitle">
               Agent Futura Property, Jual, Beli Dan Sewa Property, Mulai dari
