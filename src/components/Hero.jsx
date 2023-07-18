@@ -3,7 +3,7 @@ import Filter from "../components/Filter"
 import hero from "../assets/banner2.png"
 const Hero = () => {
   return (
-    <section className="Sdesktop:py-0 mobile:py-24">
+    <section className="Sdesktop:py-0 ">
       <div className="mx-auto containers mobile:px-4 tablet:px-8">
         <img
           className="absolute inset-0 object-cover object-center w-full h-full"
@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
           {/*  */}
           <div className=" Sdesktop:w-1/2 Sdesktop:pl-10">
-            <img src={hero} alt="hero" />
+            <img className="bg-bg" src={hero} alt="hero" />
           </div>
         </div>
       </div>
