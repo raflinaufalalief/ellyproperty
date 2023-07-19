@@ -3,13 +3,11 @@ import { hope } from "../data/data"
 import { BsArrowRight } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react"
-// import { Autoplay } from "swiper"
-import { Pagination, Autoplay } from "swiper/modules"
+import { Autoplay } from "swiper/modules"
 
-// import swiper styles
 import "swiper/css"
 import "swiper/css/autoplay"
-import "swiper/css/pagination"
+
 const OurHope = () => {
   return (
     <section className="bg-gradient-to-br from-[#e4f9ff] via-[#ffffff] to-[#e5f3f6]">
@@ -31,10 +29,7 @@ const OurHope = () => {
         {/* end section */}
         <>
           <Swiper
-            modules={[Pagination, Autoplay]}
-            pagination={{
-              clickable: true,
-            }}
+            modules={[Autoplay]}
             autoplay={{
               delay: 3500,
               disableOnInteraction: false,

@@ -2,12 +2,21 @@ import { PhotoProvider, PhotoView } from "react-photo-view"
 import "react-photo-view/dist/react-photo-view.css"
 // data
 import { data } from "../data/ListingTerbaru/DataTerbaru.json"
+import PreviewImage from "../components/PreviewImage"
 import { useParams } from "react-router-dom"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import ProfileCard from "../components/ProfileCard"
+import { GiResize } from "react-icons/gi"
 import { BiBath, BiBed } from "react-icons/bi"
-import { BsBuildingCheck, BsWhatsapp } from "react-icons/bs"
+import { BsWhatsapp } from "react-icons/bs"
 import Modal from "../components/Modal"
+//
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination } from "swiper/modules"
+
+// import swiper styles
+import "swiper/css"
+import "swiper/css/pagination"
 
 const product = {
   name: "Propertylisting",
@@ -17,17 +26,6 @@ const product = {
     { id: 1, name: "Primary", href: "#" },
     { id: 2, name: "Secondary", href: "#" },
   ],
-
-  description:
-    'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
-  highlights: [
-    "Hand cut and sewn locally",
-    "Dyed with our proprietary colors",
-    "Pre-washed & pre-shrunk",
-    "Ultra-soft 100% cotton",
-  ],
-  details:
-    'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 }
 
 export default function ProductDetail() {
@@ -37,6 +35,7 @@ export default function ProductDetail() {
   const { title } = useParams()
   const myData = data.find((data) => data.title === String(title))
   useEffect(() => {}, [myData])
+  const [preview, setPreview] = useState(false)
   return (
     <section className="bg-white">
       <div className="pt-6">
@@ -80,73 +79,47 @@ export default function ProductDetail() {
         </nav>
 
         {/* Image gallery */}
-        <div className="max-w-2xl mx-auto mt-6 mobile:px-6 Sdesktop:grid Sdesktop:max-w-7xl Sdesktop:grid-cols-3 Sdesktop:gap-x-8 Sdesktop:px-8">
-          <PhotoProvider>
-            <div className="hidden overflow-hidden rounded-lg aspect-h-4 aspect-w-3 Sdesktop:block">
-              {myData.image.map((res, indx) => (
-                <>
-                  <PhotoView key={indx} src={res}>
-                    {indx < 4 ? (
-                      <img
-                        src={res}
-                        alt=""
-                        className="object-cover object-center w-full h-full"
-                      />
-                    ) : undefined}
-                  </PhotoView>
-                </>
-              ))}
+
+        <Swiper
+          modules={[Pagination]}
+          slidesPerView={1}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1170: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+        >
+          {myData.image.map((res, idx) => (
+            <div key={idx}>
+              <SwiperSlide>
+                <div className="Sdesktop:pt-10">
+                  <img
+                    src={res}
+                    alt=""
+                    onClick={() => setPreview((prev) => !prev)}
+                    className="Sdesktop:w-[500px] Sdesktop:h-[500px] mobile:h-[300px] mobile:w-[500px] object-cover cursor-pointer"
+                  />
+                </div>
+              </SwiperSlide>
             </div>
-            <div className="hidden Sdesktop:grid Sdesktop:grid-cols-1 Sdesktop:gap-y-8">
-              <div className="overflow-hidden rounded-lg aspect-h-2 aspect-w-3">
-                {myData.image.map((res, indx) => (
-                  <>
-                    <PhotoView key={indx} src={res}>
-                      {indx < 2 ? (
-                        <img
-                          src={res}
-                          alt=""
-                          className="object-cover object-center w-full h-full"
-                        />
-                      ) : undefined}
-                    </PhotoView>
-                  </>
-                ))}
-              </div>
-              <div className="overflow-hidden rounded-lg aspect-h-2 aspect-w-3">
-                {myData.image.map((res, indx) => (
-                  <>
-                    <PhotoView key={indx} src={res}>
-                      {indx < 3 ? (
-                        <img
-                          src={res}
-                          alt=""
-                          className="object-cover object-center w-full h-full"
-                        />
-                      ) : undefined}
-                    </PhotoView>
-                  </>
-                ))}
-              </div>
-            </div>
-            {/* utama photo */}
-            <div className="overflow-hidden rounded-lg aspect-h-3 aspect-w-4 Sdesktop:aspect-h-4 Sdesktop:aspect-w-3">
-              {myData.image.map((res, indx) => (
-                <>
-                  <PhotoView key={indx} src={res}>
-                    {indx < 1 ? (
-                      <img
-                        src={res}
-                        alt=""
-                        className="object-cover object-center w-full h-full"
-                      />
-                    ) : undefined}
-                  </PhotoView>
-                </>
-              ))}
-            </div>
-          </PhotoProvider>
-        </div>
+          ))}
+          {preview ? <PreviewImage props={setPreview} /> : null}
+        </Swiper>
 
         {/*  informasi property */}
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 mobile:px-6 Sdesktop:grid Sdesktop:max-w-7xl Sdesktop:grid-cols-3 Sdesktop:grid-rows-[auto,auto,1fr] Sdesktop:gap-x-8 Sdesktop:px-8 Sdesktop:pb-24 Sdesktop:pt-16">
@@ -182,7 +155,7 @@ export default function ProductDetail() {
                     Luas Tanah
                     <div className="flex items-center space-x-3 text-sm font-semibold mobile:text-base ">
                       <span className="text-2xl">
-                        <BsBuildingCheck />
+                        <GiResize />
                       </span>
                       <p className="text-sm text-medium text-black/60">
                         {myData.lbb}

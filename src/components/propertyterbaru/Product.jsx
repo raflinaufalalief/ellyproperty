@@ -1,16 +1,14 @@
 import React, { useState } from "react"
-import { data } from "../data/ListingTerbaru/DataTerbaru.json"
+import { data } from "../../data/ListingTerbaru/DataTerbaru.json"
 import { FaBath, FaBed, FaLocationDot } from "react-icons/fa6"
 import { GiResize } from "react-icons/gi"
 import { BsFillBuildingFill } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react"
-// import { Autoplay } from "swiper"
 import { Pagination } from "swiper/modules"
 
 // import swiper styles
 import "swiper/css"
-import "swiper/css/autoplay"
 import "swiper/css/pagination"
 
 const Product = () => {
@@ -35,9 +33,6 @@ const Product = () => {
 
             <Swiper
               modules={[Pagination]}
-              pagination={{
-                clickable: true,
-              }}
               autoplay={true}
               slidesPerView={1}
               spaceBetween={30}
@@ -84,12 +79,12 @@ const Product = () => {
                           {res.title}
                         </h2>
                         <div>
-                          <div className="flex items-center mt-2 text-sm font-normal text-gray-800 line-clamp-1">
+                          <div className="flex items-center mt-2 text-sm font-normal text-gray-800 gap-x-1 line-clamp-1">
                             <FaLocationDot className=" text-black/80" />
                             {res.area}
                           </div>
                         </div>
-                        <div className="mt-4">
+                        <div className="my-3">
                           <h1 className="text-sm font-normal text-text/60">
                             Harga mulai dari
                           </h1>
@@ -122,19 +117,10 @@ const Product = () => {
                       <div className="grid grid-cols-2 mt-8">
                         <div className="flex items-center">
                           <Link to={`/listings/detail/${res.title}`}>
-                            <button className="inline-flex w-full px-3 py-2 text-sm font-medium text-white transition-transform duration-300 ease-in-out transform rounded-lg select-none bg-accent hover:-translate-y-2">
-                              view detail
+                            <button className="px-2 py-1 text-xs rounded-md btn-outline ">
+                              {res.type}
                             </button>
                           </Link>
-                        </div>
-                        <div className="flex items-center justify-end">
-                          <p className="inline-block font-semibold leading-tight text-accent whitespace-nowrap rounded-xl">
-                            <span className="text-lg">
-                              <button className="inline-flex w-full px-3 py-2 text-sm font-medium text-white transition-transform duration-300 ease-in-out transform bg-green-800 rounded-lg select-none hover:-translate-y-2">
-                                whatsapp
-                              </button>
-                            </span>
-                          </p>
                         </div>
                       </div>
                     </div>
