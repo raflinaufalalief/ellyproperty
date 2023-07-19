@@ -16,7 +16,7 @@ const OurHope = () => {
           <div className="w-full mobile:px-5">
             <h1 className="title">
               Apa yang Anda <br />
-              <span className="text-accent">Harapkan</span> dari Kami ?
+              Harapkan dari Kami ?
             </h1>
             <div className="pl-3 mt-5 border-l-4 border-accent">
               <p className="subtitle">

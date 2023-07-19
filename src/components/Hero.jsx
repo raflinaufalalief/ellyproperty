@@ -13,10 +13,12 @@ const Hero = () => {
         <div className="relative z-10 items-center mx-auto containers Sdesktop:flex">
           <div className="w-full Sdesktop:w-1/2">
             <h1 className="mb-4 uppercase title">ElyFutura</h1>
-            <p className="subtitle">
-              Agent Futura Property, Jual, Beli Dan Sewa Property, Mulai dari
-              property primary hingga property secondary.
-            </p>
+            <div className="pl-3 mt-5 border-l-4 border-accent">
+              <p className="subtitle">
+                Agent Futura Property, Jual, Beli Dan Sewa Property, Mulai dari
+                property primary hingga property secondary.
+              </p>
+            </div>
             <Filter />
           </div>
           {/*  */}

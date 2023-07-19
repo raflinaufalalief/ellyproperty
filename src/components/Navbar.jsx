@@ -30,7 +30,7 @@ const Navbar = () => {
                   <li
                     onClick={() => setMenu((prev) => !prev)}
                     key={index}
-                    className="text-lg font-semibold text-primary hover:text-accent mobile:space-y-3 mobile:my-3 tablet:my-4"
+                    className="text-base font-semibold mobile:border-b mobile:py-2 text-primary hover:text-accent mobile:space-y-3 mobile:my-3 tablet:my-4"
                   >
                     <Link to={result.path}>{result.name}</Link>
                   </li>

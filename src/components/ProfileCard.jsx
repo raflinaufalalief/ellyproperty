@@ -3,9 +3,9 @@ import { BsWhatsapp } from "react-icons/bs"
 const ProfileCard = () => {
   return (
     <>
-      <div className="max-w-sm mx-5 mt-10">
+      <div className="max-w-sm mx-10 my-10 mt-0">
         <div className="px-4 pt-8 pb-10 bg-white border rounded-lg shadow-lg">
-          <div className="relative mx-auto rounded-full w-36">
+          <div className="relative w-20 mx-auto rounded-full">
             <span className="absolute right-0 w-3 h-3 m-3 bg-green-500 rounded-full ring-2 ring-green-300 ring-offset-2"></span>
             <img
               className="w-full h-auto mx-auto rounded-full"
@@ -14,16 +14,13 @@ const ProfileCard = () => {
             />
           </div>
           <h1 className="my-1 text-xl font-bold leading-8 text-center text-gray-900">
-            Michael Simbal
+            Ely Futura
           </h1>
           <h3 className="leading-6 text-center text-gray-600 font-lg text-semibold">
             Marketing Exec. at Denva Corp
           </h3>
-          <p className="text-sm leading-6 text-center text-gray-500 hover:text-gray-600">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Architecto, placeat!
-          </p>
-          <div className="px-3 py-2 mt-3 text-gray-600 bg-green-700 rounded shadow-sm hover:shadow hover:bg-green-800">
+
+          <div className="px-3 py-1 mt-3 text-gray-600 bg-green-700 rounded shadow-sm hover:shadow hover:bg-green-800">
             <div className="flex items-center justify-center py-2 text-lg text-white gap-x-3">
               <BsWhatsapp />
               WhatsApp

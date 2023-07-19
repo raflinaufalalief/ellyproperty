@@ -10,13 +10,7 @@ const CTA = () => {
         <div className="flex w-full max-w-xl mx-auto ">
           <div className="mb-16">
             <div className="Sdesktop:w-[500px]">
-              <h2 className="title">
-                Renovasi
-                <span className="inline-block px-2 font-bold text-accent">
-                  Rumah
-                </span>
-                Anda
-              </h2>
+              <h2 className="title">Renovasi Rumah Anda</h2>
               <div className="pl-3 mt-5 border-l-4 border-accent">
                 <p className="subtitle">
                   Kami juga menyediakan solusi lengkap untuk memperbarui dan

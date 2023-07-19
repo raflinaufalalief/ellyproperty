@@ -85,15 +85,12 @@ const Product = () => {
                           </div>
                         </div>
                         <div className="my-3">
-                          <h1 className="text-sm font-normal text-text/60">
-                            Harga mulai dari
-                          </h1>
                           <h3 className="text-base font-medium">
                             Rp {res.harga}
                           </h3>
                         </div>
                         <hr className="my-2 bg-text/20" />
-                        <div className="flex justify-center gap-x-4 ">
+                        <div className="flex justify-start gap-x-4 ">
                           <div className="flex items-center gap-x-2">
                             <FaBath className="text-xbase" />
                             <h1 className="text-sm font-normal">{res.km}</h1>
@@ -114,7 +111,7 @@ const Product = () => {
                         <hr className="my-2 bg-text/20" />
                       </div>
 
-                      <div className="grid grid-cols-2 mt-8">
+                      <div className="mt-5">
                         <div className="flex items-center">
                           <Link to={`/listings/detail/${res.title}`}>
                             <button className="px-2 py-1 text-xs rounded-md btn-outline ">

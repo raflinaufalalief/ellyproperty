@@ -21,9 +21,7 @@ const ContactUs = () => {
               />
             </div>
             <div className="mobile:mt-5">
-              <h1 className="mb-5 title">
-                Konsultasi <span className="text-accent">Dengan</span> Kami
-              </h1>
+              <h1 className="mb-5 title">Konsultasi Dengan Kami</h1>
               <div className="pl-3 mt-5 border-l-4 border-accent">
                 <p className="subtitle">
                   Kami siap membantu Anda dengan pertanyaan atau permintaan yang

@@ -11,7 +11,7 @@ import image7 from "../assets/invest.jpg"
 
 // import assets
 export const dataNavLink = [
-  { id: 1, name: "Beranda", path: "/" },
+  { id: 1, name: "Home", path: "/" },
   { id: 2, name: "About", path: "/about" },
   { id: 3, name: "Product", path: "/product" },
   { id: 4, name: "Profile", path: "/profile" },

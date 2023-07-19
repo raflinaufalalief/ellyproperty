@@ -5,7 +5,7 @@ const Profile = () => {
     window.scrollTo(0, 0)
   })
   return (
-    <section>
+    <div className="pb-20">
       <div className="mx-auto bg-gray-200 containers ">
         <div className="pb-8 bg-white rounded-lg shadow-xl">
           <div className="absolute mt-4 rounded right-12"></div>
@@ -256,7 +256,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

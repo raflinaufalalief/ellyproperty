@@ -13,7 +13,7 @@ export default function WhyChoose() {
         <div className="justify-center mobile:px-4 tablet:px-8 Sdesktop:flex">
           <div className="Sdesktop:w-8/12 mobile:w-12/12">
             <h1 className="title">
-              Temukan <span className="text-accent">Rumah</span>
+              Temukan Rumah
               <br />
               Impian Anda!
             </h1>
