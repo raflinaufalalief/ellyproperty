@@ -107,7 +107,7 @@ export default function ProductDetail() {
           {myData.image.map((res, idx) => (
             <div key={idx}>
               <SwiperSlide>
-                <div className="Sdesktop:pt-10">
+                <div className="Sdesktop:pt-10 mobile:pt-5">
                   <img
                     src={res}
                     alt=""
