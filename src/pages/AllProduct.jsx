@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import data from "../Data/ListinganPopular/DataPopular.json"
+import data from "../data/ListinganPopular/DataPopular.json"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 
 import { FaBath, FaBed, FaLocationDot } from "react-icons/fa6"
@@ -8,7 +8,7 @@ import { BsFillBuildingFill } from "react-icons/bs"
 
 const AllProduct = ({ props }) => {
   const location = useLocation()
-  const filterOption = new URLSearchParams(location.search).get("filter")
+  const filterOption = new URLSearchPardams(location.search).get("filter")
   const navigates = useNavigate()
   const [filteredProducts, setFilteredProducts] = useState([])
   useEffect(() => {
