@@ -1,9 +1,3 @@
-// asset services
-import icon1 from "../assets/buy.jpg"
-import icon2 from "../assets/rent.jpg"
-import icon3 from "../assets/sale.jpg"
-import icon4 from "../assets/renov.jpg"
-
 //assets hope
 import image5 from "../assets/time.jpg"
 import image6 from "../assets/qualitas.jpg"
@@ -11,18 +5,11 @@ import image7 from "../assets/invest.jpg"
 
 // import assets
 export const dataNavLink = [
-  { id: 1, name: "Home", path: "/" },
+  { id: 1, name: "Home", path: "/#" },
   { id: 2, name: "About", path: "/about" },
-  { id: 3, name: "Product", path: "/product" },
+  { id: 3, name: "Product", path: "/all-listings" },
   { id: 4, name: "Profile", path: "/profile" },
   { id: 5, name: "Contact", path: "/contact" },
-]
-
-export const dataNavLinkFooter = [
-  { id: 1, name: "About", path: "/about" },
-  { id: 2, name: "Product", path: "/product" },
-  { id: 3, name: "Profile", path: "/profile" },
-  { id: 4, name: "Contact", path: "/contact" },
 ]
 
 export const hope = [
@@ -43,33 +30,6 @@ export const hope = [
     name: "Investasi Jangka Panjang",
     image: image7,
     text: "Tindakan membeli atau memiliki properti dengan tujuan mendapatkan keuntungan finansial melalui apresiasi nilai properti dan pendapatan sewa.",
-  },
-]
-
-export const services = [
-  {
-    id: 1,
-    name: "Buy Property",
-    image: icon1,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 2,
-    name: "Rent Property",
-    image: icon2,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 3,
-    name: "Sell Property",
-    image: icon3,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
-  },
-  {
-    id: 4,
-    name: "Resonavasi & lain-lain",
-    image: icon4,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum commodi provident est ex similique.",
   },
 ]
 

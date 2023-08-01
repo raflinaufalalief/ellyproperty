@@ -81,7 +81,7 @@ const OurHope = () => {
                         </button>
                       </Link>
                       <div>
-                        <span className="inline-block w-7/12 h-1 rounded-full mobile:w-6/12 bg-accent"></span>
+                        <span className="inline-block w-7/12 rounded-full h-[1px] mobile:w-6/12 bg-accent"></span>
                       </div>
                     </div>
                   </div>

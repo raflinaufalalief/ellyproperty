@@ -13,7 +13,7 @@
     @apply mobile:py-20 Sdesktop:py-24 w-full;
   }
   .title {
-    @apply text-3xl font-bold capitalize Sdesktop:text-4xl text-primary;
+    @apply text-2xl font-bold capitalize Sdesktop:text-3xl text-primary;
   }
   .subtitle {
     @apply Sdesktop:text-xl tablet:text-lg mobile:text-lg text-secondary font-normal mb-5;
@@ -39,6 +39,11 @@
   }
   .btn-link {
     @apply text-accent bg-accent text-xl Sdesktop:text-2xl;
+  }
+
+  .disabled {
+    cursor: default !important;
+    opacity: 0.5;
   }
 }
 

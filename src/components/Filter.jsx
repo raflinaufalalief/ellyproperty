@@ -3,48 +3,50 @@ import { useNavigate } from "react-router-dom"
 import { data } from "../data/ListingTerbaru/DataTerbaru.json"
 
 const Filter = () => {
-  const [type, setType] = useState("")
-  const [typeProperty, setTypeProperty] = useState("")
-  const [area, setArea] = useState("")
-  const [inputValue, setInputValue] = useState("")
-  const [lowerCases, setLowerCase] = useState("")
+  // const [area, setArea] = useState("");
+  const [searchQuery, setSearchQuery] = useState("")
+  const [filteredData, setFilteredData] = useState([])
 
   const navigate = useNavigate()
 
-  const handlerFilter = () => {
-    // console.log(area);
-    // const valueInput = area.toLowerCase();
-    // const filterd = setInputValue(valueInput);
+  const handleInput = (e) => {
+    setSearchQuery(e.target.value)
+  }
 
-    // setLowerCase(valueInput);
+  const handleChange = (e) => {
     const matchFilter = data.find(
-      (produk) => produk.area.toLowerCase() === area.toLowerCase()
+      (produk) =>
+        produk.area.toLowerCase() === e.toLowerCase() ||
+        produk.typeProperty.toLowerCase() === e.toLowerCase()
     )
     if (matchFilter) {
-      navigate(`/all-listings?area=${area}`)
+      navigate(`/all-listings?filter=${searchQuery}`)
     } else {
-      alert(`Listingan ${area} tidak ada`)
+      alert(`Listingan ${searchQuery} tidak ada`)
     }
   }
 
   return (
-    <div className="w-full from-[#BAE5FE] to-white pb-8" id="home">
-      <div className="mx-auto containers">
+    <div
+      className="relative bottom-[5rem] w-full Sdesktop:containers Sdesaktop:mx-auto"
+      id="home"
+    >
+      <div className=" mx-auto px-5 py-10 bg-[#BAE5FE] bg-opacity-95 rounded-lg ">
         <div className="">
-          <h1 className="mb-3 text-lg font-medium text-primary">
+          <h1 className="mb-3 text-lg font-medium text-primary Sdesktop:mb-3">
             Cari Properti Dengan Mudah
           </h1>
-          <div className="space-y-5 text-center">
+          <div className="text-center mobile:space-y-5 Sdesktop:flex Sdesktop:items-center Sdesktop:gap-x-5">
             <label
               for="default-search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only "
+              class="mb-2 text-sm font-medium text-gray-900 sr-only "
             >
               Search
             </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <div class="relative w-full">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <svg
-                  className="w-5 h-5 text-gray-500 "
+                  class="w-5 h-5 text-gray-500 "
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -61,16 +63,16 @@ const Filter = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full p-4 pl-10 text-sm text-gray-900 border rounded-lg "
-                placeholder="Search Mockups, Logos..."
-                value={area}
-                onChange={(e) => setArea(e.target.value)}
+                class="p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Area, Type Property secondary atau primary"
+                value={searchQuery} /* area state */
+                onChange={handleInput} // setArea state
                 required
               />
             </div>
             <button
-              onClick={handlerFilter}
-              className="w-full px-4 py-2 mt-6 text-lg font-semibold bg-[#BAE5FE] rounded-md shadow-md text-primary"
+              onClick={(e) => handleChange(searchQuery)}
+              className="px-4 py-3 text-lg font-semibold bg-white rounded-md shadow-md mobile:py-2 mobile:w-full mobile:mt-6 text-primary"
             >
               Search
             </button>
