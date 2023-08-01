@@ -49,8 +49,7 @@ export default function WhyChoose() {
                   Dengan pengetahuan luas tentang pasar properti dan pengalaman
                   yang kaya, kami akan menjadi mitra Anda yang andal dalam
                   mencari properti yang sesuai dengan keinginan dan kebutuhan
-                  Anda. Percayakan pada kami untuk pengalaman properti yang
-                  lancar dan sukses. Hubungi kami sekarang!
+                  Anda. Hubungi kami sekarang!
                 </p>
               </div>
               <Link to="/profile">
