@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import profile from "../assets/profile.png"
 import { GrMapLocation } from "react-icons/gr"
 import { IoBusinessOutline } from "react-icons/io5"
+import { BsArrowRight } from "react-icons/bs"
 
 const Profile = () => {
   useEffect(() => {
@@ -59,24 +60,27 @@ const Profile = () => {
                   </span>
                 </div>
                 <div className="flex items-center justify-center my-5 text-base font-medium leading-normal capitalize text-secondary mobile:text-sm">
-                  <div className="mr-2 text-sm text-black">
+                  <div className="mr-2 text-sm">
                     <GrMapLocation />
                   </div>
                   Cengkareng, Jakarta Barat
                 </div>
-                <div className="flex items-center justify-center my-5 text-base font-medium leading-normal capitalize text-secondary mobile:text-sm">
-                  <div className="mr-2 text-sm text-black">
+                <div className="flex items-center justify-center my-5 space-x-2 text-base font-medium leading-normal capitalize text-secondary mobile:text-sm">
+                  <div className="mr-2 text-xs">
                     <IoBusinessOutline />
                   </div>
                   Principal Consultant at Futura Property
                 </div>
               </div>
-              <Link
-                to="/contact"
-                className="flex items-center justify-center text-lg  py-3 mx-auto my-3 font-semibold text-white border rounded-lg w-[20%] mobile:w-[50%] bg-accent hover:bg-accent/50"
-              >
-                Hubungi Saya
-              </Link>
+              <div className="flex items-center justify-center">
+                <div className="flex items-center max-w-sm mx-0 mt-5 Sdesktop:max-w-full gap-x-2 Sdesktop:gap-x-6">
+                  <Link to="/contact">
+                    <button className="flex items-center justify-center mx-auto Sdesktop:mx-0 btn-sm Sdesktop:btn-md btn-accent Sdesktop:gap-x-4 mobile:gap-x-2">
+                      Hubungi Saya
+                    </button>
+                  </Link>
+                </div>
+              </div>
               <div className="py-10 mt-10 text-center border-t border-blueGray-200">
                 <div className="flex flex-wrap justify-center">
                   <div className="w-full px-4 Sdesktop:w-9/12">
