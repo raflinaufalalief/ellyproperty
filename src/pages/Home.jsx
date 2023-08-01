@@ -1,6 +1,5 @@
 import React from "react"
 import Hero from "../components/hero/Hero"
-
 import CTA from "../components/CTA"
 import ContactUs from "../components/ContactUs"
 import OurHope from "../components/OurHope"
@@ -15,7 +14,6 @@ const Home = () => {
       <Filter />
       <WhyChoose />
       <OurHope />
-      {/* <AllProperty /> */}
       <Product />
       <CTA />
       <ContactUs />

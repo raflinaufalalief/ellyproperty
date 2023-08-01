@@ -16,16 +16,6 @@ import "react-photo-view/dist/react-photo-view.css"
 import "swiper/css"
 import "swiper/css/pagination"
 
-const product = {
-  name: "Propertylisting",
-  href: "#",
-
-  breadcrumbs: [
-    { id: 1, name: "Primary", href: "#" },
-    { id: 2, name: "Secondary", href: "#" },
-  ],
-}
-
 export default function ProductDetail() {
   useEffect(() => {
     window.scrollTo(0, 0)
