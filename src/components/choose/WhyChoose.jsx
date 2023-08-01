@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 
 export default function WhyChoose() {
   return (
-    <section>
+    <section className="mobile:pt-0 tablet:pt-0">
       <div className="px-4 mx-auto containers">
         <div className="justify-center Sdesktop:flex">
           <div className="Sdesktop:w-8/12 mobile:w-12/12">
