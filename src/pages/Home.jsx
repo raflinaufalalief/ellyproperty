@@ -1,7 +1,5 @@
 import React from "react"
-
 import Hero from "../components/hero/Hero"
-// import AllProperty from "../components/AllProperty"
 
 import CTA from "../components/CTA"
 import ContactUs from "../components/ContactUs"

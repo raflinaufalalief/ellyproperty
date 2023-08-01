@@ -2,11 +2,9 @@ import React from "react"
 import { Route, Routes } from "react-router-dom"
 import Home from "../pages/Home"
 import About from "../pages/AboutPage"
-// import Product from "../pages/ProductPage"
 import Profile from "../pages/Profile"
 import Contact from "../pages/ContactPage"
 import DetailProduct from "../pages/DetailProduct"
-// import ProductPage from "../pages/AllProduct"
 import AllProduct from "../pages/AllProduct"
 
 const Router = () => {
