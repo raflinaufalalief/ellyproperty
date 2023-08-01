@@ -65,8 +65,8 @@ const Profile = () => {
                   </div>
                   Cengkareng, Jakarta Barat
                 </div>
-                <div className="flex items-center justify-center my-5 space-x-2 text-base font-medium leading-normal capitalize text-secondary mobile:text-sm">
-                  <div className="mr-2 text-xs">
+                <div className="flex items-center justify-center my-5 text-base font-medium leading-normal capitalize text-secondary mobile:text-xs">
+                  <div className="text-sm">
                     <IoBusinessOutline />
                   </div>
                   Principal Consultant at Futura Property
