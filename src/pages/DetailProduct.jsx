@@ -4,18 +4,17 @@ import PreviewImage from "../components/detail/PreviewImage"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import ProfileCard from "../components/ProfileCard"
+import SpekSingkat from "../components/detail/SpekSingkat"
 // import { BsWhatsapp } from "react-icons/bs"
-import SpekSingkat from "../components/detail/SpekSIngkat"
 import Modal from "../components/detail/Modal"
-import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
 // import { PhotoProvider, PhotoView } from "react-photo-view"
 import "react-photo-view/dist/react-photo-view.css"
 
 // import swiper styles
 import "swiper/css"
 import "swiper/css/pagination"
-
 export default function ProductDetail() {
   useEffect(() => {
     window.scrollTo(0, 0)
