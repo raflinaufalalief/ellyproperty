@@ -13,10 +13,10 @@
     @apply mobile:py-20 Sdesktop:py-24 w-full;
   }
   .title {
-    @apply text-2xl font-bold capitalize Sdesktop:text-3xl text-primary;
+    @apply mobile:text-2xl font-bold capitalize text-3xl text-primary;
   }
   .subtitle {
-    @apply Sdesktop:text-xl tablet:text-lg mobile:text-lg text-secondary font-normal mb-5;
+    @apply text-xl tablet:text-lg  mobile:text-lg text-secondary font-normal mb-5;
   }
 
   .btn-md {

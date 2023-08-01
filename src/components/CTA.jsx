@@ -8,9 +8,9 @@ import home3 from "../assets/homecta.jpg"
 const CTA = () => {
   return (
     <section className="bg-gradient-to-br from-[#e4f9ff] via-[#ffffff] to-[#e5f3f6]">
-      <div className="relative flex flex-col mx-auto Sdesktop:flex-row containers mobile:px-4 ">
+      <div className="relative flex flex-col px-4 mx-auto Sdesktop:flex-row containers ">
         {/* <!-- Left Column --> */}
-        <div className="flex w-full max-w-xl mx-auto ">
+        <div className="flex w-full pt-10 mx-auto">
           <div className="mb-16">
             <div className="Sdesktop:w-[500px]">
               <h2 className="title">

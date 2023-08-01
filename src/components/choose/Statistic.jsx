@@ -10,7 +10,7 @@ const Statistic = () => {
             const { startNumber, endNumber, title, unit } = item
             return (
               <div key={index} className="text-center Sdesktop:border-r-2">
-                <h6 className="font-bold Sdesktop:text-3xl mobile:text-2xl ">
+                <h6 className="text-3xl font-bold mobile:text-2xl ">
                   <CountUp
                     start={startNumber}
                     end={endNumber}
@@ -20,7 +20,7 @@ const Statistic = () => {
                   {unit}
                   <span className="text-accent">+</span>
                 </h6>
-                <p className="text-sm font-medium tracking-widest uppercase Sdesktop:text-base">
+                <p className="text-lg font-medium tracking-widest uppercase mobile:text-sm">
                   {title}
                 </p>
               </div>

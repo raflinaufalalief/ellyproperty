@@ -24,9 +24,9 @@ const Product = ({ pesanwa }) => {
   }, [])
   const pesan = `https://wa.me/+628648355728?text=Saya ingin beli property ini ${pesanwa}`
   return (
-    <section>
-      <div className="mx-auto containers ">
-        <div className="mobile:px-4">
+    <section className="py-32">
+      <div className="px-4 mx-auto containers">
+        <div className="">
           {/* Listingan Terbaru */}
           <div className="ListinganTerbaru">
             <div className="flex items-end justify-between gap-4 mb-3 ">
@@ -76,7 +76,7 @@ const Product = ({ pesanwa }) => {
                             <img
                               src={res.thumnail}
                               alt=""
-                              className="Sdesktop:h-56 mobile:h-full mobile:w-full"
+                              className="Sdesktop:h-56 mobile:h-full tablet:h-full tablet:w-full mobile:w-full"
                             />
                           </div>
                         </div>
@@ -86,6 +86,9 @@ const Product = ({ pesanwa }) => {
                       </div>
 
                       <div className="mt-4">
+                        <h2 className="text-base text-primary line-clamp-1">
+                          {res.type}
+                        </h2>
                         <h2 className="text-base font-bold text-gray-800 Sdesktop:text-lg line-clamp-1">
                           {res.title}
                         </h2>

@@ -10,7 +10,7 @@ const AboutHero = () => {
     <>
       <section>
         <div>
-          <div className="pt-16 mx-auto mt-20 text-center bg-white shadow-lg containers">
+          <div className="pt-16 mx-auto mt-20 text-center bg-white shadow-lg tablet:mt-32 containers">
             <p className="text-primary">About Us</p>
             <h1 className="pb-10 mt-2 text-4xl font-bold text-primary">
               Ely Futura

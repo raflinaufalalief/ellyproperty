@@ -6,8 +6,8 @@ const VisiMisi = () => {
   return (
     <>
       <section>
-        <div className="mx-auto containers">
-          <div className="max-w-2xl mx-auto text-center">
+        <div className="px-4 mx-auto containers ">
+          <div className="mx-auto text-center containers ">
             <h2 className="mt-2 text-3xl capitalize title">
               Misi dan Visi kami
             </h2>

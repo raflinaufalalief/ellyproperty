@@ -1,27 +1,27 @@
 // data
 import { data } from "../data/ListingTerbaru/DataTerbaru.json"
-import PreviewImage from "../components/detail/PreviewImage"
+import PreviewImage from "./detail/PreviewImage"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import ProfileCard from "../components/ProfileCard"
-import SpekSingkat from "../components/detail/SpekSingkat"
-// import { BsWhatsapp } from "react-icons/bs"
-import Modal from "../components/detail/Modal"
+import ProfileCard from "./ProfileCard"
+import SpekSingkat from "./detail/SpekSingkat"
+import Modal from "./detail/Modal"
 import { Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-// import { PhotoProvider, PhotoView } from "react-photo-view"
+//
+import { PhotoProvider, PhotoView } from "react-photo-view"
 import "react-photo-view/dist/react-photo-view.css"
 
 // import swiper styles
 import "swiper/css"
 import "swiper/css/pagination"
-export default function ProductDetail() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  })
+
+const DetailProduct = () => {
   const { title } = useParams()
   const myData = data.find((data) => data.title === String(title))
-  useEffect(() => {}, [myData])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [myData])
   const [preview, setPreview] = useState(false)
   return (
     <section className="bg-white mobile:py-[66px]">
@@ -139,3 +139,4 @@ export default function ProductDetail() {
     </section>
   )
 }
+export default DetailProduct

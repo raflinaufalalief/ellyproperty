@@ -10,8 +10,8 @@ import { Link } from "react-router-dom"
 export default function WhyChoose() {
   return (
     <section>
-      <div className="mx-auto containers ">
-        <div className="justify-center mobile:px-4 tablet:px-8 Sdesktop:flex">
+      <div className="px-4 mx-auto containers">
+        <div className="justify-center Sdesktop:flex">
           <div className="Sdesktop:w-8/12 mobile:w-12/12">
             <h1 className="title">
               Temukan Rumah
@@ -28,13 +28,13 @@ export default function WhyChoose() {
             </div>
             <img
               src={image}
-              alt="fingerprint recognition"
-              className="w-auto rounded-md Sdesktop:w-full"
+              alt=".."
+              className="w-full rounded-md mobile:w-auto"
             />
           </div>
           {/* right section */}
           <div className="flex flex-col items-center w-full Sdesktop:ml-6 Sdesktop:mt-0 mt-7 Sdesktop:w-4/12 Sdesktop:flex-col">
-            <div className="Sdesktop:w-auto ">
+            <div className=" Sdesktop:w-full">
               <img
                 src={image3}
                 alt="best"
@@ -45,7 +45,7 @@ export default function WhyChoose() {
               <div className="mt-4">
                 <img src={image2} alt="" className="w-[50px]" />
                 <h1 className="mt-4 title">Agen Profesional</h1>
-                <p className="mt-4 text-lg subtitle">
+                <p className="mt-4 subtitle">
                   Dengan pengetahuan luas tentang pasar properti dan pengalaman
                   yang kaya, kami akan menjadi mitra Anda yang andal dalam
                   mencari properti yang sesuai dengan keinginan dan kebutuhan
@@ -55,7 +55,7 @@ export default function WhyChoose() {
               </div>
               <Link to="/profile">
                 <div className="flex items-center mx-auto Sdesktop:mx-0 Sdesktop:gap-x-6">
-                  <button className="flex items-center justify-center mx-0 btn-sm Sdesktop:btn-md btn-outline Sdesktop:gap-x-4 mobile:gap-x-2">
+                  <button className="flex items-center justify-center mx-0 btn-sm Sdesktop:btn-md btn-outline Sdesktop:gap-x-4 tablet:gap-x-2 mobile:gap-x-2">
                     Tentang Saya <BsArrowRight />
                   </button>
                 </div>

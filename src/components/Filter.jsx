@@ -36,7 +36,7 @@ const Filter = () => {
           <h1 className="mb-3 text-lg font-medium text-primary Sdesktop:mb-3">
             Cari Properti Dengan Mudah
           </h1>
-          <div className="text-center mobile:space-y-5 Sdesktop:flex Sdesktop:items-center Sdesktop:gap-x-5">
+          <div className="text-center mobile:space-y-5 Sdesktop:flex Sdesktop:items-center Sdesktop:gap-x-5 tablet:flex tablet:items-center tablet:gap-x-5">
             <label
               for="default-search"
               class="mb-2 text-sm font-medium text-gray-900 sr-only "

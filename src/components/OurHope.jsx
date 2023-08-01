@@ -11,9 +11,9 @@ import "swiper/css/autoplay"
 const OurHope = () => {
   return (
     <section className="bg-gradient-to-br from-[#e4f9ff] via-[#ffffff] to-[#e5f3f6]">
-      <div className="mx-auto containers mobile:px-4 ">
-        <div className="flex flex-wrap justify-center -mx-4">
-          <div className="w-full mobile:px-5">
+      <div className="px-4 mx-auto containers ">
+        <div className="flex flex-wrap justify-center Sdesktop:-mx-4">
+          <div className="w-full ">
             <h1 className="title">
               Apa yang Anda <br />
               Harapkan dari Kami ?
@@ -59,7 +59,7 @@ const OurHope = () => {
               const { name, image, text } = result
               return (
                 <SwiperSlide
-                  className="w-full mt-5 border rounded-md shadow-md Sdesktop:px-4 pt-9"
+                  className="w-full px-4 mt-5 border rounded-md shadow-md pt-9"
                   key={index}
                 >
                   <div className="mx-auto mb-10 max-w-[500px] mobile:max-w-[300px]  ">
@@ -67,10 +67,10 @@ const OurHope = () => {
                       <img src={image} alt="image" />
                     </div>
                     <div>
-                      <h3 className="mb-4 text-xl font-semibold text-primary mobile:text-xl Sdesktop:text-xl">
+                      <h3 className="mb-4 text-xl font-semibold text-primary mobile:text-xl">
                         {name}
                       </h3>
-                      <p className="mobile:text-base Sdesktop:text-base Sdesktop:h-36 mobile:h-32 text-secondary">
+                      <p className="h-32 text-base Sdesktop:h-36 text-secondary">
                         {text}
                       </p>
                     </div>

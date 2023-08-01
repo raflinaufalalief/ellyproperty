@@ -4,7 +4,7 @@ import Home from "../pages/Home"
 import About from "../pages/AboutPage"
 import Profile from "../pages/Profile"
 import Contact from "../pages/ContactPage"
-import DetailProduct from "../pages/DetailProduct"
+import DetailProduct from "../components/DetailProduct"
 import AllProduct from "../pages/AllProduct"
 
 const Router = () => {

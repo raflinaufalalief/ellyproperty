@@ -10,7 +10,7 @@ const ContactPage = () => {
   return (
     <section>
       <div>
-        <div className="flex flex-col mx-auto my-12 mobile:px-4 containers Sdesktop:flex-row Sdesktop:my-28">
+        <div className="flex flex-col px-4 mx-auto my-12 containers Sdesktop:flex-row Sdesktop:my-28 tablet:my-28">
           <div className="flex flex-col w-full ">
             <p className="my-4 text-3xl font-bold leading-relaxed text-primary Sdesktop:text-4xl Sdesktop:leading-snug">
               Hubungi Saya
