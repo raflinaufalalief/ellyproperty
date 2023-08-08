@@ -10,17 +10,18 @@ const Statistic = () => {
             const { startNumber, endNumber, title, unit } = item
             return (
               <div key={index} className="text-center Sdesktop:border-r-2">
-                <h6 className="text-3xl font-bold mobile:text-2xl ">
-                  <CountUp
-                    start={startNumber}
-                    end={endNumber}
-                    duration={2}
-                    enableScrollSpy
-                  />
-                  {unit}
+                <h6 className="text-2xl font-bold mobile:text-2xl ">
+                  <CountUp start={startNumber} end={endNumber} duration={2.75}>
+                    {({ countUpRef }) => (
+                      <div>
+                        <span ref={countUpRef} />
+                      </div>
+                    )}
+                    {unit}
+                  </CountUp>
                   <span className="text-accent">+</span>
                 </h6>
-                <p className="text-lg font-medium tracking-widest uppercase mobile:text-sm">
+                <p className="text-base font-medium uppercase mobile:text-xs">
                   {title}
                 </p>
               </div>

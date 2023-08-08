@@ -4,30 +4,29 @@ import Statistic from "../choose/Statistic"
 import Test from "./Services"
 import ContactUs from "../ContactUs"
 import CTA from "../CTA"
+import profile from "../../assets/heo.jpg"
 
 const AboutHero = () => {
   return (
     <>
       <section>
-        <div>
-          <div className="pt-16 mx-auto mt-20 text-center bg-white shadow-lg tablet:mt-32 containers">
-            <p className="text-primary">About Us</p>
+        <div className="relative">
+          <div className="block py-16 text-center bg-white rounded shadow-lg mx-aut containers">
             <h1 className="pb-10 mt-2 text-4xl font-bold text-primary">
               Ely Futura
             </h1>
+            <p className="px-2 tracking-tight subtitle">
+              Ely Futura adalah perusahaan properti yang berfokus pada
+              pengembangan dan pemasaran properti dengan berbagai jenis dan
+              segmen. Mereka memiliki portofolio yang mencakup berbagai macam
+              proyek, mulai dari perumahan, apartemen, komersial, dan properti
+              lainnya.
+            </p>
             <img
-              className="absolute top-0 left-0 object-cover w-full mt-10 -z-10 h-96"
-              src="https://images.unsplash.com/photo-1504672281656-e4981d70414b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              className=" mobile:hidden absolute left-0 object-cover w-full  mt-0 -top-20 -z-10 h-[500px] brightness-[.4]"
+              src={profile}
               alt=""
             />
-          </div>
-
-          <div className="px-10 pt-10 pb-20 mx-auto space-y-8 text-lg tracking-wide text-center bg-white rounded-b-lg shadow-lg text-secondary containers mobile:shadow-lg">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              similique reiciendis et recusandae provident repellendus rem
-              doloremque eaque error assumenda?
-            </p>
           </div>
         </div>
       </section>

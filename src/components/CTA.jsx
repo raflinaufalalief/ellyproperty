@@ -12,7 +12,7 @@ const CTA = () => {
         {/* <!-- Left Column --> */}
         <div className="flex w-full pt-10 mx-auto">
           <div className="mb-16">
-            <div className="Sdesktop:w-[500px]">
+            <div className="Sdesktop:w-[550px]">
               <h2 className="title">
                 Properti Kualitas Terbaik <br /> yang Dapat Anda Temukan
               </h2>
@@ -20,7 +20,6 @@ const CTA = () => {
                 <p className="subtitle">
                   Temukan properti kualitas terbaik untuk Anda! Hunian elegan,
                   desain modern, fasilitas lengkap, dan lingkungan yang aman.
-                  Hubungi kami sekarang untuk pengalaman tinggal tak tertandingi
                 </p>
               </div>
             </div>

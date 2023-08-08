@@ -5,10 +5,16 @@ import { dataNavLink } from "../data/data"
 import { Link } from "react-router-dom"
 
 const Navbar = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" })
+    }
+  }
   const [menu, setMenu] = useState(false)
   return (
     <div className="fixed top-0 z-20 w-full bg-[#BAE5FE] shadow-md ">
-      <div className="py-5 containers mobile:mx-4 tablet:mx-6">
+      <div className="px-4 py-5 containers ">
         <div className="flex justify-between Sdesktop:items-center">
           <Link to="/">
             <img src={logo} alt="logo" className="w-[125px]" />

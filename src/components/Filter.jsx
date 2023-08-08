@@ -1,85 +1,105 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { data } from "../data/ListingTerbaru/DataTerbaru.json"
+import data from "../data/ListingTerbaru/DataTerbaru.json"
 
 const Filter = () => {
-  // const [area, setArea] = useState("");
-  const [searchQuery, setSearchQuery] = useState("")
-  const [filteredData, setFilteredData] = useState([])
+  const [selectedLocation, setSelectedLocation] = useState("")
+  const [selectedTypeProperty, setSelectedTypeProperty] = useState("")
+  const [selectedConditionProp, setSelectedConditionProp] = useState("")
+
+  const uniqueAreas = [...new Set(data.map((item) => item.area))]
+  const uniqueTypeProp = [...new Set(data.map((item) => item.type))]
+  const uniqueConditionProp = [
+    ...new Set(data.map((item) => item.typeProperty)),
+  ]
+
+  const handleLocationChange = (e) => {
+    setSelectedLocation(e.target.value)
+  }
+
+  const handleTypePropertyChange = (e) => {
+    setSelectedTypeProperty(e.target.value)
+  }
+
+  const handleConditionPropChange = (e) => {
+    setSelectedConditionProp(e.target.value)
+  }
 
   const navigate = useNavigate()
 
-  const handleInput = (e) => {
-    setSearchQuery(e.target.value)
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Prepare the filters to pass as search params
 
-  const handleChange = (e) => {
-    const matchFilter = data.find(
-      (produk) =>
-        produk.area.toLowerCase() === e.toLowerCase() ||
-        produk.typeProperty.toLowerCase() === e.toLowerCase()
-    )
-    if (matchFilter) {
-      navigate(`/all-listings?filter=${searchQuery}`)
-    } else {
-      alert(`Listingan ${searchQuery} tidak ada`)
+    const queryParams = new URLSearchParams()
+
+    if (selectedLocation) {
+      queryParams.set("location", selectedLocation)
     }
+    if (selectedTypeProperty) {
+      queryParams.set("typeProperty", selectedTypeProperty)
+    }
+    if (selectedConditionProp) {
+      queryParams.set("conditionProp", selectedConditionProp)
+    }
+
+    // Use the 'navigate' function to navigate to the results page with filters as search params
+
+    navigate(`/all-listings?${queryParams}`)
   }
 
   return (
-    <div
-      className="relative bottom-[5rem] w-full Sdesktop:containers Sdesaktop:mx-auto"
-      id="home"
-    >
-      <div className=" mx-auto px-5 py-10 bg-[#BAE5FE] bg-opacity-95 rounded-lg ">
-        <div className="">
-          <h1 className="mb-3 text-lg font-medium text-primary Sdesktop:mb-3">
-            Cari Properti Dengan Mudah
-          </h1>
-          <div className="text-center mobile:space-y-5 Sdesktop:flex Sdesktop:items-center Sdesktop:gap-x-5 tablet:flex tablet:items-center tablet:gap-x-5">
-            <label
-              for="default-search"
-              class="mb-2 text-sm font-medium text-gray-900 sr-only "
+    <>
+      <div className="pb-10">
+        <form onSubmit={handleSubmit}>
+          <div className="px-[35px] py-6 max-w-[1170px] mx-auto flex flex-col Sdesktop:flex-row justify-between gap-4 Sdesktop:gap-x-3 relative Sdesktop:-top-14 Sdesktop:shadow  bg-[#BAE5FE] Sdesktop:backdrop-blur rounded-lg">
+            <select
+              value={selectedLocation}
+              onChange={handleLocationChange}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
-              Search
-            </label>
-            <div class="relative w-full">
-              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg
-                  class="w-5 h-5 text-gray-500 "
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  ></path>
-                </svg>
-              </div>
-              <input
-                type="search"
-                id="default-search"
-                class="p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Area, Type Property secondary atau primary"
-                value={searchQuery} /* area state */
-                onChange={handleInput} // setArea state
-                required
-              />
-            </div>
+              <option value="">Pilih Lokasi</option>
+              {uniqueAreas.map((area, index) => (
+                <option key={index} value={area}>
+                  {area}
+                </option>
+              ))}
+            </select>
+            <select
+              value={selectedTypeProperty}
+              onChange={handleTypePropertyChange}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option value="">Pilih Type Property</option>
+              {uniqueTypeProp.map((area, index) => (
+                <option key={index} value={area}>
+                  {area}
+                </option>
+              ))}
+            </select>
+            <select
+              value={selectedConditionProp}
+              onChange={handleConditionPropChange}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option value="">Pilih Type</option>
+              {uniqueConditionProp.map((area, index) => (
+                <option key={index} value={area}>
+                  {area}
+                </option>
+              ))}
+            </select>
+            {/* Render the rest of your select elements similarly */}
             <button
-              onClick={(e) => handleChange(searchQuery)}
-              className="px-4 py-3 text-lg font-semibold bg-white rounded-md shadow-md mobile:py-2 mobile:w-full mobile:mt-6 text-primary"
+              type="submit"
+              className="Sdesktop:w-[300px] py-2    text-base font-semibold text-white bg-blue-700 rounded-md "
             >
-              Search
+              Cari
             </button>
           </div>
-        </div>
+        </form>
       </div>
-    </div>
+    </>
   )
 }
 

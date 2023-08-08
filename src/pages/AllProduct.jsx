@@ -1,127 +1,163 @@
 import React, { useEffect, useState } from "react"
-import data from "../data/ListinganPopular/DataPopular.json"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { ImSpinner8 } from "react-icons/im"
+import Footer from "../components/Footer"
 
-import { FaBath, FaBed, FaLocationDot } from "react-icons/fa6"
+import data from "../data/ListingTerbaru/DataTerbaru.json"
+
+// icons
+import { Link, useLocation, useNavigate } from "react-router-dom"
+import { BiBath, BiBed } from "react-icons/bi"
 import { GiResize } from "react-icons/gi"
 import { BsFillBuildingFill } from "react-icons/bs"
-import { Helmet } from "react-helmet-async"
 
-const AllProduct = ({ props }) => {
-  const location = useLocation()
-  const filterOption = new URLSearchParams(location.search).get("filter")
-  const navigates = useNavigate()
-  const [filteredProducts, setFilteredProducts] = useState([])
-  useEffect(() => {
-    if (filterOption) {
-      const filtered = data.filter(
-        (product) =>
-          product.area.toLowerCase().includes(filterOption.toLowerCase()) ||
-          product.typeProperty
-            .toLowerCase()
-            .includes(filterOption.toLowerCase())
-      )
-      setFilteredProducts(filtered)
-    } else {
-      setFilteredProducts(data)
-    }
-  }, [filterOption])
-  // console.log(filteredProducts);
+const Product = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   })
+
+  const location = useLocation()
+  const filterSelected = {
+    location: new URLSearchParams(location.search).get("location"),
+    typeProperty: new URLSearchParams(location.search).get("typeProperty"),
+    conditionProp: new URLSearchParams(location.search).get("conditionProp"),
+  }
+
+  const [filteredProduct, setFilteredProduct] = useState([])
+  useEffect(() => {
+    let filtered = data
+
+    if (filterSelected.location) {
+      filtered = filtered.filter((product) =>
+        product.area.includes(filterSelected.location)
+      )
+    }
+
+    if (filterSelected.typeProperty) {
+      filtered = filtered.filter((product) =>
+        product.type.includes(filterSelected.typeProperty)
+      )
+    }
+
+    if (filterSelected.conditionProp) {
+      filtered = filtered.filter((product) =>
+        product.typeProperty.includes(filterSelected.conditionProp)
+      )
+    }
+
+    setFilteredProduct(filtered)
+  }, [])
+
+  // ...
+
   return (
-    <section className="tablet:py-32 ">
-      <div>
-        <Helmet>
-          <title>ely futura</title>
-          <meta name="description" content="semua produk" />
-          <link rel="canonical" href="/AllProduct" />
-        </Helmet>
-        <div className="px-4 mx-auto containers ">
+    <>
+      <section>
+        <div className="px-4 mx-auto containers">
           <div className="">
             {/* Listingan Terbaru */}
             <div className="ListinganTerbaru">
-              {filteredProducts.map((res, index) => (
-                <div key={index} className="relative w-full mx-auto">
-                  <div className="p-4 bg-white border rounded-lg shadow-md">
-                    <div className="relative flex justify-center overflow-hidden rounded-lg h-52">
-                      <div className="w-full transition-transform duration-500 ease-in-out transform hover:scale-110">
-                        <div className="absolute inset-0 bg-bg ">
-                          <img
-                            src={res.thumnail}
-                            alt=""
-                            className="Sdesktop:h-56 mobile:h-full mobile:w-full"
-                          />
-                        </div>
-                      </div>
-                      <span className="absolute top-0 left-0 z-10 inline-flex px-3 py-2 mt-3 ml-3 text-sm font-medium text-white rounded-lg select-none bg-accent">
-                        {res.market.toUpperCase()}
-                      </span>
+              <div className="grid gap-10 tablet:grid-cols-2 Sdesktop:grid-cols-3">
+                {filteredProduct.length === 0 ? (
+                  <section className="Sdesktop:mx-80">
+                    <div className="flex items-center justify-center text-center mt-28">
+                      <p className="text-lg text-primary">
+                        Maaf Listingan belum tersedia
+                      </p>
                     </div>
+                  </section>
+                ) : (
+                  filteredProduct.map((res, index) => (
+                    <div key={index}>
+                      <div className="relative w-full mx-auto ">
+                        <div className="p-4 bg-white border rounded-lg shadow-lg hover:shadow-2xl">
+                          <Link
+                            to={`/listings/detail/${res.title}`}
+                            href="#"
+                            className="relative inline-block w-full "
+                          >
+                            <div className="relative flex justify-center overflow-hidden rounded-lg h-52">
+                              <div className="w-full transition-transform duration-500 ease-in-out transform hover:scale-110">
+                                <div className="absolute inset-0 bg-black ">
+                                  <img
+                                    src={res.thumnail}
+                                    alt=""
+                                    className="w-full h-52"
+                                  />
+                                </div>
+                              </div>
 
-                    <div className="mt-4">
-                      <h2 className="text-base font-bold text-gray-800 Sdesktop:text-lg line-clamp-1">
-                        {res.title}
-                      </h2>
-                      <div>
-                        <div className="flex items-center mt-2 text-sm font-normal text-gray-800 gap-x-1 line-clamp-1">
-                          <FaLocationDot className=" text-black/80" />
-                          {res.area}
-                        </div>
-                      </div>
-                      <div className="my-3">
-                        <h3 className="text-base font-medium">
-                          Rp {res.harga}
-                        </h3>
-                      </div>
-                      <hr className="my-2 bg-text/20" />
-                      <div className="flex justify-start gap-x-4 ">
-                        <div className="flex items-center gap-x-2">
-                          <FaBath className="text-xbase" />
-                          <h1 className="text-sm font-normal">{res.km}</h1>
-                        </div>
-                        <div className="flex items-center gap-x-2">
-                          <FaBed className="text-base" />
-                          <h1 className="text-sm font-normal">{res.kt}</h1>
-                        </div>
-                        <div className="flex items-center gap-x-2">
-                          <GiResize className="text-base" />
-                          <h1 className="text-sm font-normal">{res.lb}</h1>
-                        </div>
-                        <div className="flex items-center gap-x-2">
-                          <BsFillBuildingFill className="text-xl" />
-                          <h1 className="text-sm font-normal">{res?.lbb}</h1>
-                        </div>
-                      </div>
-                      <hr className="my-2 bg-text/20" />
-                    </div>
+                              <span className="absolute top-0 left-0 z-10 inline-flex px-3 py-2 mt-3 ml-3 text-sm font-medium text-white bg-red-500 rounded-lg select-none">
+                                {res.market.toUpperCase()}
+                              </span>
+                            </div>
 
-                    <div className="flex justify-between mt-5">
-                      <div className="flex items-center">
-                        <Link to={`/listings/detail/${res.title}`}>
-                          <button className="px-2 py-2 text-xs rounded-md btn-outline ">
-                            Detail Unit
-                          </button>
-                        </Link>
-                      </div>
-                      <div className="flex items-center">
-                        <Link to={`/listings/detail/${res.title}`}>
-                          <button className="px-2 py-2 text-xs rounded-md btn-outline ">
-                            whatsapp
-                          </button>
-                        </Link>
+                            <div className="mt-4">
+                              <div className="flex mb-4 text-sm ">
+                                <div className="px-2 text-white rounded-md bg-accent">
+                                  {res.type}
+                                </div>
+                              </div>
+                              <h2
+                                className="mt-2 text-base font-medium text-gray-800 md:text-lg line-clamp-1"
+                                title=".."
+                              >
+                                {res.title}
+                              </h2>
+                              <p
+                                className="mt-2 text-sm text-gray-800 line-clamp-1"
+                                title=".."
+                              >
+                                {res.area}
+                              </p>
+                            </div>
+                            <div className="flex mt-3">
+                              <div className="flex space-x-5 overflow-hidden">
+                                <p className="flex items-center font-medium text-gray-800">
+                                  <BiBed className="mr-1 text-base" /> {res.kt}
+                                </p>
+
+                                <p className="flex items-center font-medium text-gray-800">
+                                  <BiBath className="mr-1 text-base" />
+                                  {res.km}
+                                </p>
+                                <p className="flex items-center font-medium text-gray-800">
+                                  <GiResize className="mr-1 text-base" />
+                                  {res.lb}
+                                </p>
+                                <p className="flex items-center font-medium text-gray-800">
+                                  <BsFillBuildingFill className="mr-1 text-base" />
+                                  {res.lbb}
+                                </p>
+                              </div>
+                            </div>
+                          </Link>
+                          <div className="grid grid-cols-2 mt-5">
+                            <div className="flex items-center">
+                              <p className="font-medium line-clamp-1">
+                                Rp {res.harga}
+                              </p>
+                            </div>
+
+                            <div className="flex items-end justify-end">
+                              <Link to={`/listings/detail/${res.title}`}>
+                                <button className="px-1 py-1 text-xs rounded-md btn-outline ">
+                                  Detail Unit
+                                </button>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  ))
+                )}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 
-export default AllProduct
+export default Product

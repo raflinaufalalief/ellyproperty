@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { data } from "../../data/ListingTerbaru/DataTerbaru.json"
+import data from "../../data/ListingTerbaru/DataTerbaru.json"
 import { useParams } from "react-router-dom"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 
@@ -12,7 +12,7 @@ const Modal = () => {
   return (
     <>
       <button
-        className="text-base font-medium"
+        className="text-sm font-medium"
         type="button"
         onClick={() => setShowModal(true)}
       >
@@ -36,6 +36,14 @@ const Modal = () => {
                 </div>
                 <div className="flex-auto w-full px-4 py-0">
                   <div className="">
+                    <div className="flex items-center justify-between border-b-2 border-black/20">
+                      <h1 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/70">
+                        Tipe Properti
+                      </h1>
+                      <h2 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/60 ">
+                        {myData?.type}
+                      </h2>
+                    </div>
                     <div className="flex items-center justify-between border-b-1 border-black/20">
                       <h1 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/70">
                         Kamar Tidur
@@ -62,7 +70,7 @@ const Modal = () => {
                     </div>
                     <div className="flex items-center justify-between border-t-2 border-black/20">
                       <h1 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/70">
-                        Luas Bangunan + Balkon
+                        Balkon
                       </h1>
                       <h2 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/60 ">
                         {myData?.lbb ? myData.lbb : "-"}
@@ -89,17 +97,10 @@ const Modal = () => {
                         Carport
                       </h1>
                       <h2 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/60 ">
-                        {myData?.garasi ? myData.garasi : "parkiran umum"}
+                        {myData?.garasi ? myData.garasi : "-"}
                       </h2>
                     </div>
-                    <div className="flex items-center justify-between border-t-2 border-black/20">
-                      <h1 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/70">
-                        Tipe Properti
-                      </h1>
-                      <h2 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/60 ">
-                        {myData?.type}
-                      </h2>
-                    </div>
+
                     <div className="flex items-center justify-between border-t-2 border-black/20">
                       <h1 className="text-sm font-medium mobile:py-4 Sdesktop:py-3 text-black/70">
                         Sertifikat

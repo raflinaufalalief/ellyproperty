@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import profile from "../assets/profile.png"
 import { GrMapLocation } from "react-icons/gr"
 import { IoBusinessOutline } from "react-icons/io5"
-import { BsArrowRight } from "react-icons/bs"
 
 const Profile = () => {
   useEffect(() => {
@@ -39,25 +38,6 @@ const Profile = () => {
                   <h1 className="text-2xl font-bold leading-normal ">
                     Ely Futura
                   </h1>
-                  <span
-                    className="p-1 bg-blue-500 rounded-full"
-                    title="Verified"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="text-gray-100 h-2.5 w-2.5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="4"
-                        d="M5 13l4 4L19 7"
-                      ></path>
-                    </svg>
-                  </span>
                 </div>
                 <div className="flex items-center justify-center my-5 text-base font-medium leading-normal capitalize text-secondary mobile:text-sm">
                   <div className="mr-2 text-sm">
@@ -65,20 +45,22 @@ const Profile = () => {
                   </div>
                   Cengkareng, Jakarta Barat
                 </div>
-                <div className="flex items-center justify-center my-5 text-base font-medium leading-normal capitalize text-secondary mobile:text-xs">
-                  <div className="text-sm">
+                <div className="flex items-center justify-center mb-5 text-base font-medium leading-normal capitalize text-secondary mobile:text-xs">
+                  <div className="text-sm Sdesktop:mr-2">
                     <IoBusinessOutline />
                   </div>
-                  Principal Consultant at Futura Property
+                  Property Consultant at Futura Property
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <div className="flex items-center max-w-sm mx-0 mt-5 Sdesktop:max-w-full gap-x-2 Sdesktop:gap-x-6">
-                  <Link to="/contact">
+                  <a
+                    href={`https://wa.me/+6287789070758?text=Saya ingin bertanya`}
+                  >
                     <button className="flex items-center justify-center mx-auto Sdesktop:mx-0 btn-sm Sdesktop:btn-md btn-accent Sdesktop:gap-x-4 mobile:gap-x-2">
                       Hubungi Saya
                     </button>
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="py-10 mt-10 text-center border-t border-blueGray-200">

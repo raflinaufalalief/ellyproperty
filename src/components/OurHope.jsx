@@ -12,8 +12,8 @@ const OurHope = () => {
   return (
     <section className="bg-gradient-to-br from-[#e4f9ff] via-[#ffffff] to-[#e5f3f6]">
       <div className="px-4 mx-auto containers ">
-        <div className="flex flex-wrap justify-center Sdesktop:-mx-4">
-          <div className="w-full ">
+        <div className="flex flex-wrap justify-center -mx-4">
+          <div className="w-full px-4">
             <h1 className="title">
               Apa yang Anda <br />
               Harapkan dari Kami ?
@@ -67,22 +67,22 @@ const OurHope = () => {
                       <img src={image} alt="image" />
                     </div>
                     <div>
-                      <h3 className="mb-4 text-xl font-semibold text-primary mobile:text-xl">
+                      <h3 className="mb-4 text-xl font-semibold text-primary mobile:text-xl Sdesktop:text-xl">
                         {name}
                       </h3>
-                      <p className="h-32 text-base Sdesktop:h-36 text-secondary">
+                      <p className="mobile:text-base Sdesktop:text-base Sdesktop:h-36 mobile:h-32 text-secondary">
                         {text}
                       </p>
                     </div>
                     <div>
                       <Link to="/about">
-                        <button className="flex items-center justify-center pt-4 mx-0 text-base text-primary hover:text-accent Sdesktop:gap-x-4 mobile:gap-x-2">
+                        <button className="flex items-center justify-center pt-4 mx-0 text-base text-primary hover:text-accent gap-x-2 ">
                           Selengkapnya <BsArrowRight />
                         </button>
                       </Link>
-                      <div>
+                      {/* <div>
                         <span className="inline-block w-7/12 rounded-full h-[1px] mobile:w-6/12 bg-accent"></span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </SwiperSlide>

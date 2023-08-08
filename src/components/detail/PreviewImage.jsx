@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
-import { useParams } from "react-router-dom"
-import { data } from "../../data/ListingTerbaru/DataTerbaru.json"
+import { Link, useParams } from "react-router-dom"
+import data from "../../data/ListingTerbaru/DataTerbaru.json"
 // Import Swiper React components
 import { Pagination, Navigation } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -43,10 +43,12 @@ const PreviewImage = ({ props }) => {
       <div className="fixed pt-[4rem] Sdesktop:pt-0 top-0 right-0 bg-black w-screen h-screen z-50 overflow-hidden ">
         <div className="flex items-center justify-between px-3 py-5">
           <div className=""></div>
-          <AiOutlineCloseCircle
-            onClick={() => props((prev) => !prev)}
-            className="text-2xl font-normal text-white rounded-full shadow-lg cursor-pointer"
-          />
+          <Link to={`/listings/detail/${myData.title}`}>
+            <AiOutlineCloseCircle
+              onClick={() => props((prev) => !prev)}
+              className="text-2xl font-normal text-white rounded-full shadow-lg cursor-pointer"
+            />
+          </Link>
         </div>
         <div>
           <Swiper
