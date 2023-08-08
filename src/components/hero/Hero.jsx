@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div id="home">
       <div className="relative block h-[500px] w-full">
-        <div className="absolute top-0 w-full h-full bg-cover bg-no-repeat bg-center bg-[url('./public/assets/hero.jpg')] ">
+        <div className="absolute top-0 w-full h-full bg-center bg-no-repeat bg-cover bg-hero ">
           <span className="absolute w-full h-full bg-black opacity-50"></span>
         </div>
         <div className="relative pt-56 mx-auto containers">
