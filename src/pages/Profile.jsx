@@ -4,9 +4,6 @@ import { GrMapLocation } from "react-icons/gr"
 import { IoBusinessOutline } from "react-icons/io5"
 
 const Profile = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  })
   return (
     <>
       {/* <!-- component --> */}

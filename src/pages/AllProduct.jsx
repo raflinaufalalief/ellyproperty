@@ -11,10 +11,6 @@ import { GiResize } from "react-icons/gi"
 import { BsFillBuildingFill } from "react-icons/bs"
 
 const Product = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  })
-
   const location = useLocation()
   const filterSelected = {
     location: new URLSearchParams(location.search).get("location"),

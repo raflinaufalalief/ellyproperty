@@ -5,9 +5,6 @@ import { IoLogoWhatsapp } from "react-icons/io"
 import contact from "../../public/assets/homecta.jpg"
 
 const ContactPage = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  })
   return (
     <section className="pt-0">
       {/* // <!-- Container --> */}

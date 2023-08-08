@@ -1,5 +1,5 @@
-import React from "react"
-import { Route, Routes } from "react-router-dom"
+import React, { useEffect } from "react"
+import { Route, Routes, useLocation } from "react-router-dom"
 import Home from "../pages/Home"
 import About from "../pages/AboutPage"
 import Profile from "../pages/Profile"
@@ -9,6 +9,10 @@ import AllProduct from "../pages/AllProduct"
 import PreviewImage from "../components/detail/PreviewImage"
 
 const Router = () => {
+  const route = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [route])
   return (
     <Routes>
       <Route path="/" element={<Home />} />
