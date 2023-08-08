@@ -11,7 +11,7 @@ const Profile = () => {
     <>
       {/* <!-- component --> */}
       <div className="relative block h-[500px] w-full">
-        <div className="absolute top-0 w-full h-full bg-center bg-cover bg-no-repeat bg-[url('./assets/bg-profile.jpg')]">
+        <div className="absolute top-0 w-full h-full bg-center bg-cover bg-no-repeat bg-[url('./public/assets/bg-profile.jpg')]">
           <span className="absolute w-full h-full bg-black opacity-50"></span>
         </div>
       </div>
