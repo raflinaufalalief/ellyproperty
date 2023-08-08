@@ -130,7 +130,7 @@ const DetailProduct = () => {
               </div>
               {/* Profile left */}
               <div className="flex flex-col mx-4">
-                <div className="mt-10 gap-x-4  w-[300px] mobile:w-full Sdesktop:sticky Sdesktop:top-28 bg-white  px-5 py-5 ">
+                <div className="mt-10">
                   <ProfileCard pesanwa={myData.title} />
                 </div>
               </div>

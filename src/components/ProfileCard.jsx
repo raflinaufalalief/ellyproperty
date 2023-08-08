@@ -6,7 +6,7 @@ import profile from "../assets/profile.png"
 const ProfileCard = ({ pesanwa }) => {
   const pesan = `https://wa.me/+6287789070758?text=Saya ingin beli property ini ${pesanwa}`
   return (
-    <div className="flex flex-col mx-4">
+    <div className="flex flex-col mx-4 border">
       <div className="mt-10 gap-x-4 rounded-md w-[300px]  mobile:w-full desktop:sticky desktop:top-28 bg-white shadow-lg px-5 py-5 h-fit">
         <div className="flex items-center justify-center gap-x-3">
           <div>
@@ -20,7 +20,7 @@ const ProfileCard = ({ pesanwa }) => {
             <img src={logo} className="w-28" alt="" />
           </div>
         </div>
-        <div className="mobile:sticky mobile:hidden mobile:bottom-0">
+        <div className="mobile:sticky">
           <hr className="my-5 rounded-full bg-black/10" />
           <div className="my-5">
             <a className="flex items-center justify-center w-full py-2 text-sm font-normal bg-transparent border rounded-lg shadow-md gap-x-2 hover:bg-slate-200 ">
