@@ -59,10 +59,15 @@ const Product = () => {
               <div className="grid gap-10 tablet:grid-cols-2 Sdesktop:grid-cols-3">
                 {filteredProduct.length === 0 ? (
                   <section className="Sdesktop:mx-80">
-                    <div className="flex items-center justify-center text-center mt-28">
+                    <div className="flex items-center justify-center text-center mt-36 Sdesktop:mt-28 ">
                       <p className="text-lg text-primary">
                         Maaf Listingan belum tersedia
                       </p>
+                    </div>
+                    <div className="flex items-center justify-center mt-5 text-center">
+                      <Link to="/" className="text-blue-500 underline">
+                        Kembali ke Halaman Utama
+                      </Link>
                     </div>
                   </section>
                 ) : (
