@@ -1,7 +1,7 @@
 //assets hope
-import image5 from "../assets/time.jpg"
-import image6 from "../assets/qualitas.jpg"
-import image7 from "../assets/invest.jpg"
+import image5 from "../../public/assets/time.jpg"
+import image6 from "../../public/assets/qualitas.jpg"
+import image7 from "../../public/assets/invest.jpg"
 
 // import assets
 export const dataNavLink = [

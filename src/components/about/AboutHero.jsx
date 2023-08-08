@@ -4,7 +4,7 @@ import Statistic from "../choose/Statistic"
 import Test from "./Services"
 import ContactUs from "../ContactUs"
 import CTA from "../CTA"
-import profile from "../../assets/heo.jpg"
+import profile from "../../../public/assets/heo.jpg"
 
 const AboutHero = () => {
   return (

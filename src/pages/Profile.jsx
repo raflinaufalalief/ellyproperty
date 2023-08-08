@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
-import { Link } from "react-router-dom"
-import profile from "../assets/profile.png"
+import profile from "../../public/assets/profile.png"
 import { GrMapLocation } from "react-icons/gr"
 import { IoBusinessOutline } from "react-icons/io5"
 

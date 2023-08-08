@@ -1,7 +1,7 @@
 import React from "react"
-import image from "../../assets/bg-profile.jpg"
-import image2 from "../../assets/user.jpg"
-import image3 from "../../assets/best.png"
+import image from "../../../public/assets/bg-profile.jpg"
+import image2 from "../../../public/assets/user.jpg"
+import image3 from "../../../public/assets/best.png"
 
 import { BsArrowRight } from "react-icons/bs"
 import Statistic from "./Statistic"

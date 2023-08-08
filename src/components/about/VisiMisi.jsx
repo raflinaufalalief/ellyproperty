@@ -1,6 +1,6 @@
 import React from "react"
-import visi from "../../assets/visii.jpg"
-import misi from "../../assets/misii.jpg"
+import visi from "../../../public/assets/visii.jpg"
+import misi from "../../../public/assets/misii.jpg"
 
 const VisiMisi = () => {
   return (

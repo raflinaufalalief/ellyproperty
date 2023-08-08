@@ -1,9 +1,9 @@
 import React from "react"
 import { BsArrowRight } from "react-icons/bs"
 import { Link } from "react-router-dom"
-import home from "../assets/bedroom.jpg"
-import home2 from "../assets/bathroom.jpg"
-import home3 from "../assets/homecta.jpg"
+import home from "../../public/assets/bedroom.jpg"
+import home2 from "../../public/assets/bathroom.jpg"
+import home3 from "../../public/assets/homecta.jpg"
 
 const CTA = () => {
   return (

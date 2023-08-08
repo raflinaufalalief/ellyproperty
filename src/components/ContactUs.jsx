@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import contact from "../assets/contact.jpg"
+import contact from "../../public/assets/contact.jpg"
 
 const ContactUs = () => {
   return (

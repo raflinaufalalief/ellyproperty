@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { ImOffice } from "react-icons/im"
 import { BiLogoGmail } from "react-icons/bi"
 import { IoLogoWhatsapp } from "react-icons/io"
-import contact from "../assets/homecta.jpg"
+import contact from "../../public/assets/homecta.jpg"
 
 const ContactPage = () => {
   useEffect(() => {

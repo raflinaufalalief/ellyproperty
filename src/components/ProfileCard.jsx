@@ -1,7 +1,7 @@
 import React from "react"
-import logo from "../assets/logo-futura.png"
+import logo from "../../public/assets/logo-futura.png"
 import { BsTelephone, BsWhatsapp } from "react-icons/bs"
-import profile from "../assets/profile.png"
+import profile from "../../public/assets/profile.png"
 
 const ProfileCard = ({ pesanwa }) => {
   const pesan = `https://wa.me/+6287789070758?text=Saya ingin beli property ini ${pesanwa}`
